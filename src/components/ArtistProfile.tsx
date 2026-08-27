@@ -1,0 +1,106 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { Instagram, Youtube, Twitter, Crown, Play } from "lucide-react";
+import { Reveal } from "./ui";
+import { useVote } from "./VoteProvider";
+
+export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen: boolean }) {
+  const { openVote } = useVote();
+
+  return (
+    <section className="artist-profile">
+      <Link href="/artistas" className="link-btn back-link">← Voltar aos artistas</Link>
+
+      <div
+        className="artist-profile__banner"
+        style={{
+          background: `radial-gradient(circle at 30% 20%, ${artist.color}55, transparent 60%), linear-gradient(160deg, #0d0616, #050208)`,
+        }}
+      >
+        <div className="artist-profile__id">
+          <div
+            className="artist-profile__avatar"
+            style={{ background: artist.photo ? undefined : `linear-gradient(160deg, ${artist.color}, ${artist.accent})` }}
+          >
+            {artist.photo ? (
+              <img
+                src={artist.photo}
+                alt={artist.name}
+                className="artist-profile__photo"
+                style={artist.photoPosition ? { objectPosition: artist.photoPosition } : undefined}
+              />
+            ) : (
+              artist.name[0]
+            )}
+          </div>
+          <div>
+            <h1>{artist.name} <Crown size={20} color={artist.color} /></h1>
+            {artist.subscribers && <span className="subscriber-count">{artist.subscribers}</span>}
+          </div>
+        </div>
+      </div>
+
+      <div className="artist-profile__grid">
+        <div>
+          <Reveal><p className="muted">{artist.bio}</p></Reveal>
+          <Reveal delay={80}>
+            <div className="socials">
+              <a href={artist.socials?.instagram} className="social-icon"><Instagram size={16} /></a>
+              <a href={artist.socials?.youtube} className="social-icon"><Youtube size={16} /></a>
+              <a href={artist.socials?.twitter} className="social-icon"><Twitter size={16} /></a>
+            </div>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <h2 className="section-subtitle">Músicas</h2>
+            <div className="songs-list">
+              {artist.songs.map((s: any) => (
+                <SongRow key={s.id} song={s} color={artist.color} />
+              ))}
+            </div>
+          </Reveal>
+        </div>
+
+        <Reveal delay={100} className="artist-profile__side">
+          <div className="card side-card">
+            <span className="muted small">Vote e apoie {artist.name}</span>
+            {votingOpen ? (
+              <button
+                className="btn btn--primary"
+                style={{ background: artist.color, marginTop: "1rem", width: "100%" }}
+                onClick={() => openVote(artist)}
+              >
+                VOTAR NESTE ARTISTA
+              </button>
+            ) : (
+              <span className="badge badge--closed" style={{ marginTop: "1rem" }}>Votação encerrada</span>
+            )}
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function SongRow({ song, color }: { song: any; color: string }) {
+  const [playing, setPlaying] = useState(false);
+  return (
+    <div className="song-row">
+      <div className="song-row__cover" style={{ background: `${color}22` }}>{song.cover}</div>
+      <div className="song-row__info">
+        <span className="song-row__title">{song.title}</span>
+        <span className="muted small">{song.ref}</span>
+      </div>
+      <span className="muted small">{song.duration}</span>
+      <button
+        className={`play-btn ${playing ? "play-btn--active" : ""}`}
+        style={{ borderColor: color, color: playing ? "#000" : color, background: playing ? color : "transparent" }}
+        onClick={() => setPlaying((v) => !v)}
+      >
+        <Play size={14} fill={playing ? "#000" : "none"} />
+      </button>
+    </div>
+  );
+}
