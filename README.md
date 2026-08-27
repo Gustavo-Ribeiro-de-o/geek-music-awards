@@ -17,11 +17,11 @@ npm install                      # instala o lucide-react (ícones), que é novo
 Depois, abra o `.env` e adicione uma linha nova no final:
 
 ```
-TEAM_PASSWORD="GMW20262508"
+TEAM_PASSWORD="escolha-uma-senha-forte-aqui"
 ```
 
 (Essa é a senha da "Área da equipe" — o painel que mostra os votos reais.
-Troque por uma senha sua se quiser.)
+Use uma senha só sua, não compartilhe publicamente.)
 
 Depois rode de novo o seed (é seguro rodar de novo, ele atualiza em vez de
 duplicar):
