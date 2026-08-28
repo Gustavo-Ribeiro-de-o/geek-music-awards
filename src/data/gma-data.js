@@ -1141,9 +1141,9 @@ const DEFAULT_WINNERS = [
 
 const DEFAULT_SETTINGS = {
   votingOpen: true,
-  votingEndsAt: new Date(Date.now() + 1000 * 60 * 60 * 24 * 12 + 1000 * 60 * 60 * 8).toISOString(),
+  votingEndsAt: new Date("2026-12-19T19:00:00-03:00").toISOString(),
   votesPerUser: 3,
-  eventDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 12 + 1000 * 60 * 60 * 8).toISOString(),
+  eventDate: new Date("2026-12-19T19:00:00-03:00").toISOString(),
   eventLocation: "Arena Geek — São Paulo/SP",
   eventBroadcast: "YouTube • Twitch • GMA App",
   schedule: [
