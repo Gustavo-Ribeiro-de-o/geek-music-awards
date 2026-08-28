@@ -30,6 +30,7 @@ export function GmaFooter() {
         <a href="#" className="social-icon"><Twitter size={16} /></a>
       </div>
       <p className="muted small">© 2026 Geek Music Awards. Todos os direitos reservados.</p>
+      <p className="muted small">Desenvolvido por Gustavo Santos</p>
     </footer>
   );
 }
