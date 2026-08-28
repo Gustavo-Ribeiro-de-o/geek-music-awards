@@ -13,6 +13,8 @@ type Artist = {
   accent: string;
   photo?: string;
   photoPosition?: string;
+  clipTitle?: string;
+  clipUrl?: string;
 };
 
 export function ArtistCard({ artist, votingOpen }: { artist: Artist; votingOpen: boolean }) {
@@ -37,7 +39,20 @@ export function ArtistCard({ artist, votingOpen }: { artist: Artist; votingOpen:
       </div>
       <div className="artist-card__body">
         <h3>{artist.name}</h3>
-        <p className="muted small">{artist.short}</p>
+        {artist.clipUrl ? (
+          <div className="artist-card__clip">
+            <p className="muted small">
+              {artist.clipTitle ? (
+                <>Faixa que os fãs gostam: <strong>{artist.clipTitle}</strong></>
+              ) : (
+                "Ouça um trecho:"
+              )}
+            </p>
+            <audio controls preload="none" src={artist.clipUrl} className="artist-card__audio" />
+          </div>
+        ) : (
+          <p className="muted small">{artist.short}</p>
+        )}
         <div className="artist-card__actions">
           <Link
             href={`/artistas/${artist.slug}`}
