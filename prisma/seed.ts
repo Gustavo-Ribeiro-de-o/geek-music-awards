@@ -75,9 +75,11 @@ const ARTISTS = [
 ];
 
 const CATEGORIES = [
-  { slug: "melhor-voz", name: "Melhor Voz" },
-  { slug: "melhor-interpretacao", name: "Melhor Interpretação" },
-  { slug: "melhor-flow", name: "Melhor Flow" },
+  { slug: "artista-do-ano", name: "Artista Geek do Ano" },
+  { slug: "melhor-rap", name: "Melhor Rap Geek" },
+  { slug: "revelacao", name: "Revelação do Ano" },
+  { slug: "melhor-performance", name: "Melhor Performance" },
+  { slug: "favorito-publico", name: "Artista Favorito do Público" },
 ];
 
 async function main() {

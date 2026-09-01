@@ -1141,9 +1141,11 @@ const CATEGORIES = [
 ];
 
 const VOTE_CATEGORIES = [
-  { id: "melhor-voz", name: "Melhor Voz", icon: "🎙️" },
-  { id: "melhor-interpretacao", name: "Melhor Interpretação", icon: "🎭" },
-  { id: "melhor-flow", name: "Melhor Flow", icon: "🌊" },
+  { id: "artista-do-ano", name: "Artista Geek do Ano", icon: "🏆" },
+  { id: "melhor-rap", name: "Melhor Rap Geek", icon: "🎤" },
+  { id: "revelacao", name: "Revelação do Ano", icon: "✨" },
+  { id: "melhor-performance", name: "Melhor Performance", icon: "🎭" },
+  { id: "favorito-publico", name: "Artista Favorito do Público", icon: "❤️" },
 ];
 
 const DEFAULT_WINNERS = [
