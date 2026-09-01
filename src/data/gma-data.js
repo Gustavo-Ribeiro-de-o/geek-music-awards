@@ -1104,12 +1104,13 @@ const ARTISTS = [
     bio: "BLAZE RAPPER canta sobre superação com uma energia que lembra os grandes protagonistas ninjas, sempre com muita determinação nas rimas. Atualmente seu canal conta com 88,7 mil inscritos.",
     color: "#f59e0b", accent: "#fbbf24",
     photo: BLAZERAPPER_PHOTO,
+    clipTitle: "Predador",
+    clipUrl: "/audio/blazerapper-trecho.mp3",
     subscribers: "88,7 mil inscritos",
     subscriberCount: 88700,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "blz1", title: "Vontade de Fogo", ref: "Naruto", duration: "3:24", cover: "🔥" },
-      { id: "blz2", title: "Caminho Ninja", ref: "Naruto", duration: "3:12", cover: "🍥" },
+      { id: "blazerapper-real", title: "Predador", duration: "0:21", cover: "🔥", url: "/audio/blazerapper-trecho.mp3" },
     ],
   },
   {
