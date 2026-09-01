@@ -961,12 +961,13 @@ const ARTISTS = [
     bio: "oShaman transformou fones de ouvido e produção caseira em marca registrada, criando um lo-fi geek relaxante que domina as lives noturnas. Atualmente seu canal conta com 39,75 mil inscritos.",
     color: "#eab308", accent: "#fde047",
     photo: OSHAMAN_PHOTO,
+    clipTitle: "Amor de Primavera",
+    clipUrl: "/audio/oshaman-trecho.mp3",
     subscribers: "39,75 mil inscritos",
     subscriberCount: 39750,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "osh1", title: "Madrugada Pixelada", ref: "Anime original", duration: "2:48", cover: "🎧" },
-      { id: "osh2", title: "Halo Baixo", ref: "Anime original", duration: "3:02", cover: "😇" },
+      { id: "oshaman-real", title: "Amor de Primavera", duration: "0:47", cover: "🎧", url: "/audio/oshaman-trecho.mp3" },
     ],
   },
   {
@@ -1003,12 +1004,13 @@ const ARTISTS = [
     bio: "igris construiu uma persona séria e disciplinada, com letras sobre lealdade e superação inspiradas em RPGs e light novels. Atualmente seu canal conta com 76,4 mil inscritos.",
     color: "#1e293b", accent: "#64748b",
     photo: IGRIS_PHOTO,
+    clipTitle: "Traição de Sangue",
+    clipUrl: "/audio/igris-trecho.mp3",
     subscribers: "76,4 mil inscritos",
     subscriberCount: 76400,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "igr1", title: "Ordem de Sombra", ref: "Anime original", duration: "3:27", cover: "🖤" },
-      { id: "igr2", title: "Comando Silencioso", ref: "Anime original", duration: "3:14", cover: "⚔️" },
+      { id: "igris-real", title: "Traição de Sangue", duration: "0:33", cover: "🖤", url: "/audio/igris-trecho.mp3" },
     ],
   },
   {
