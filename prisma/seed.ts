@@ -42,7 +42,6 @@ const ARTISTS = [
   { slug: "bachira-music", name: "Bachira Music" },
   { slug: "orionoz", name: "OrionOz" },
   { slug: "takeru", name: "Takeru" },
-  { slug: "sidney-scaccio", name: "Sidney Scaccio" },
   { slug: "vg-beats", name: "VG Beats" },
   { slug: "tk-raps", name: "TK RAPS" },
   { slug: "felicia-rock", name: "Felícia Rock" },
