@@ -790,6 +790,8 @@ const ARTISTS = [
     bio: "Papyrus Da Batata mistura humor afiado com referências de games, trazendo leveza pro rap geek sem perder a qualidade técnica.",
     color: "#eab308", accent: "#fde047",
     photo: PAPYRUSDABATATA_PHOTO,
+    clipTitle: "Mundo Sem Cor",
+    clipUrl: "/audio/papyrusdabatata-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
       { id: "pb1", title: "Bater os Ossos", ref: "Undertale", duration: "2:47", cover: "🦴" },
@@ -801,6 +803,8 @@ const ARTISTS = [
     bio: "Iron Master traz batidas pesadas e uma presença robusta, como se cada faixa fosse blindada.",
     color: "#64748b", accent: "#94a3b8",
     photo: IRONMASTER_PHOTO,
+    clipTitle: "Relógio Esquisito",
+    clipUrl: "/audio/ironmaster-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
       { id: "im1", title: "Armadura de Aço", ref: "Fullmetal Alchemist", duration: "3:22", cover: "⚙️" },
@@ -812,6 +816,8 @@ const ARTISTS = [
     bio: "VMZ aposta numa produção moderna e num nome curto que já virou marca registrada na cena do trap geek.",
     color: "#0ea5e9", accent: "#7dd3fc",
     photo: VMZ_PHOTO,
+    clipTitle: "Bad End Friends",
+    clipUrl: "/audio/vmz-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
       { id: "vm1", title: "Sigla", ref: "Anime original", duration: "2:53", cover: "🔤" },
