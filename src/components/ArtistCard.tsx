@@ -62,7 +62,11 @@ export function ArtistCard({ artist, votingOpen }: { artist: Artist; votingOpen:
             VER PERFIL
           </Link>
           {votingOpen && (
-            <button className="btn btn--primary btn--sm" style={{ background: artist.color }} onClick={() => openVote(artist)}>
+            <button
+              className="btn btn--primary btn--sm"
+              style={{ background: artist.color, boxShadow: `0 8px 24px -8px ${artist.color}99` }}
+              onClick={() => openVote(artist)}
+            >
               VOTAR
             </button>
           )}

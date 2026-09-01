@@ -95,7 +95,7 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
             {votingOpen ? (
               <button
                 className="btn btn--primary"
-                style={{ background: artist.color, marginTop: "1rem", width: "100%" }}
+                style={{ background: artist.color, boxShadow: `0 8px 24px -8px ${artist.color}99`, marginTop: "1rem", width: "100%" }}
                 onClick={() => openVote(artist)}
               >
                 VOTAR NESTE ARTISTA
@@ -110,7 +110,17 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
   );
 }
 
+function isDarkColor(hex: string) {
+  const c = hex.replace("#", "");
+  const r = parseInt(c.substring(0, 2), 16);
+  const g = parseInt(c.substring(2, 4), 16);
+  const b = parseInt(c.substring(4, 6), 16);
+  return (0.299 * r + 0.587 * g + 0.114 * b) / 255 < 0.45;
+}
+
 function SongRow({ song, color, playing, onToggle }: { song: any; color: string; playing: boolean; onToggle: () => void }) {
+  const idleColor = isDarkColor(color) ? "#e5e5e5" : color;
+  const activeFg = isDarkColor(color) ? "#ffffff" : "#000000";
   return (
     <div className="song-row">
       <div className="song-row__cover" style={{ background: `${color}22` }}>
@@ -127,10 +137,10 @@ function SongRow({ song, color, playing, onToggle }: { song: any; color: string;
       <span className="muted small">{song.duration}</span>
       <button
         className={`play-btn ${playing ? "play-btn--active" : ""}`}
-        style={{ borderColor: color, color: playing ? "#000" : color, background: playing ? color : "transparent" }}
+        style={{ borderColor: idleColor, color: playing ? activeFg : idleColor, background: playing ? color : "transparent" }}
         onClick={onToggle}
       >
-        <Play size={14} fill={playing ? "#000" : "none"} />
+        <Play size={14} fill={playing ? activeFg : "none"} />
       </button>
     </div>
   );

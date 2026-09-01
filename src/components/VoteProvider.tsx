@@ -123,7 +123,7 @@ function VoteModal({
           <p className="muted">Cada voto precisa de um e-mail verificado, pra impedir votos duplicados.</p>
           <div className="modal__actions">
             <button className="btn btn--ghost" onClick={onClose}>Cancelar</button>
-            <Link href="/login" className="btn btn--primary" style={{ background: artist.color }} onClick={onClose}>
+            <Link href="/login" className="btn btn--primary" style={{ background: artist.color, boxShadow: `0 8px 24px -8px ${artist.color}99` }} onClick={onClose}>
               Fazer login
             </Link>
           </div>
@@ -158,7 +158,7 @@ function VoteModal({
             <button className="btn btn--ghost" onClick={onClose}>Cancelar</button>
             <button
               className="btn btn--primary"
-              style={{ background: artist.color, opacity: category ? 1 : 0.5 }}
+              style={{ background: artist.color, boxShadow: `0 8px 24px -8px ${artist.color}99`, opacity: category ? 1 : 0.5 }}
               disabled={!category}
               onClick={onProceedToConfirm}
             >
@@ -182,7 +182,7 @@ function VoteModal({
         </p>
         <div className="modal__actions">
           <button className="btn btn--ghost" onClick={onBackToCategory}>Voltar</button>
-          <button className="btn btn--primary" style={{ background: artist.color, opacity: busy ? 0.7 : 1 }} disabled={busy} onClick={onConfirm}>
+          <button className="btn btn--primary" style={{ background: artist.color, boxShadow: `0 8px 24px -8px ${artist.color}99`, opacity: busy ? 0.7 : 1 }} disabled={busy} onClick={onConfirm}>
             {busy ? "Enviando..." : "Confirmar voto"}
           </button>
         </div>
