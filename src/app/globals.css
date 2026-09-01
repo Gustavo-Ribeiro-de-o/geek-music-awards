@@ -187,6 +187,12 @@
         .side-card { position: static; }
       }
 
+      .trophy-banner { display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; max-width: 320px; margin: 0 auto; }
+      .trophy-banner__img { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); }
+      .trophy-banner__caption { font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 1.05rem; background: linear-gradient(90deg, var(--purple), var(--blue)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .trophy-banner--side { max-width: 100%; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+      .trophy-banner--side .trophy-banner__caption { font-size: 0.9rem; }
+
       /* ---------- RANKING ---------- */
       .podium { display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: end; gap: 1rem; max-width: 720px; margin: 0 auto 2.5rem; }
       .podium__col { display: flex; flex-direction: column; align-items: center; gap: 0.35rem; }

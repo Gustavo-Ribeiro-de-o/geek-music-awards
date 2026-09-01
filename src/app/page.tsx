@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Music2, Sparkles, Users, Trophy, Radio, ChevronRight } from "lucide-react";
 import { Reveal, CountdownBlock } from "@/components/ui";
 import { ArtistCard } from "@/components/ArtistCard";
-import { ARTISTS, DEFAULT_SETTINGS, MAIN_MIN_SUBSCRIBERS } from "@/data/gma-data";
+import { ARTISTS, DEFAULT_SETTINGS, MAIN_MIN_SUBSCRIBERS, TROPHY_IMAGE_URL } from "@/data/gma-data";
 
 export default function HomePage() {
   const settings = DEFAULT_SETTINGS;
@@ -67,6 +67,15 @@ export default function HomePage() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      <section className="section">
+        <Reveal>
+          <div className="trophy-banner">
+            <img src={TROPHY_IMAGE_URL} alt="Prêmio Geek Music Awards" className="trophy-banner__img" />
+            <p className="trophy-banner__caption">Você pode premiar seu artista votando nele!</p>
+          </div>
+        </Reveal>
       </section>
 
       <section className="section section--strip">
