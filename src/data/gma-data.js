@@ -1017,12 +1017,13 @@ const ARTISTS = [
     bio: "Hawky mistura a estética de animes de espadachins com um rap geek técnico, sempre trazendo referências de duelos épicos. Atualmente seu canal conta com 58,2 mil inscritos.",
     color: "#0ea5e9", accent: "#7dd3fc",
     photo: HAWKY_PHOTO,
+    clipTitle: "CHAMAS",
+    clipUrl: "/audio/hawky-trecho.mp3",
     subscribers: "58,2 mil inscritos",
     subscriberCount: 58200,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "hwk1", title: "Corte Único", ref: "Demon Slayer", duration: "3:09", cover: "🗡️" },
-      { id: "hwk2", title: "Respiração de Fogo", ref: "Demon Slayer", duration: "2:57", cover: "🔥" },
+      { id: "hawky-real", title: "CHAMAS", duration: "0:35", cover: "🗡️", url: "/audio/hawky-trecho.mp3" },
     ],
   },
   {
@@ -1031,12 +1032,13 @@ const ARTISTS = [
     bio: "Slow GM traz uma produção caótica e cheia de efeitos elétricos, com um trap geek que mistura games e batalhas épicas. Atualmente seu canal conta com 47,6 mil inscritos.",
     color: "#a855f7", accent: "#d8b4fe",
     photo: SLOWGM_PHOTO,
+    clipTitle: "Mas Que Ironia",
+    clipUrl: "/audio/slowgm-trecho.mp3",
     subscribers: "47,6 mil inscritos",
     subscriberCount: 47600,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "sgm1", title: "Load Infinito", ref: "Anime original", duration: "3:18", cover: "⚡" },
-      { id: "sgm2", title: "Curto-Circuito", ref: "Anime original", duration: "2:51", cover: "🎮" },
+      { id: "slowgm-real", title: "Mas Que Ironia", duration: "0:16", cover: "⚡", url: "/audio/slowgm-trecho.mp3" },
     ],
   },
   {
@@ -1045,12 +1047,13 @@ const ARTISTS = [
     bio: "Ranori aposta em um trap geek de atitude, com letras sobre superação e uma estética marcante inspirada em animes de ação. Atualmente seu canal conta com 62,1 mil inscritos.",
     color: "#dc2626", accent: "#fca5a5",
     photo: RANORI_PHOTO,
+    clipTitle: "Intercessão",
+    clipUrl: "/audio/ranori-trecho.mp3",
     subscribers: "62,1 mil inscritos",
     subscriberCount: 62100,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "rnr1", title: "Fúria Rubra", ref: "Anime original", duration: "3:06", cover: "🔥" },
-      { id: "rnr2", title: "Sem Fronteiras", ref: "Anime original", duration: "3:22", cover: "🌊" },
+      { id: "ranori-real", title: "Intercessão", duration: "0:30", cover: "🔥", url: "/audio/ranori-trecho.mp3" },
     ],
   },
   {
