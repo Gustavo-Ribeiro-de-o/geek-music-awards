@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Instagram, Youtube, Twitter, Crown, Play } from "lucide-react";
 import { Reveal } from "./ui";
@@ -8,6 +8,24 @@ import { useVote } from "./VoteProvider";
 
 export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen: boolean }) {
   const { openVote } = useVote();
+  const [playingId, setPlayingId] = useState<string | null>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const playingSong = artist.songs.find((s: any) => s.id === playingId);
+
+  useEffect(() => {
+    if (playingId && audioRef.current) {
+      audioRef.current.play().catch(() => {});
+    }
+  }, [playingId]);
+
+  const toggleSong = (song: any) => {
+    if (playingId === song.id) {
+      audioRef.current?.pause();
+      setPlayingId(null);
+    } else {
+      setPlayingId(song.id);
+    }
+  };
 
   return (
     <section className="artist-profile">
@@ -57,9 +75,17 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
             <h2 className="section-subtitle">Músicas</h2>
             <div className="songs-list">
               {artist.songs.map((s: any) => (
-                <SongRow key={s.id} song={s} color={artist.color} />
+                <SongRow key={s.id} song={s} color={artist.color} playing={playingId === s.id} onToggle={() => toggleSong(s)} />
               ))}
             </div>
+            {playingSong?.url && (
+              <audio
+                ref={audioRef}
+                src={playingSong.url}
+                onEnded={() => setPlayingId(null)}
+                onPause={() => setPlayingId(null)}
+              />
+            )}
           </Reveal>
         </div>
 
@@ -84,8 +110,7 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
   );
 }
 
-function SongRow({ song, color }: { song: any; color: string }) {
-  const [playing, setPlaying] = useState(false);
+function SongRow({ song, color, playing, onToggle }: { song: any; color: string; playing: boolean; onToggle: () => void }) {
   return (
     <div className="song-row">
       <div className="song-row__cover" style={{ background: `${color}22` }}>{song.cover}</div>
@@ -97,7 +122,7 @@ function SongRow({ song, color }: { song: any; color: string }) {
       <button
         className={`play-btn ${playing ? "play-btn--active" : ""}`}
         style={{ borderColor: color, color: playing ? "#000" : color, background: playing ? color : "transparent" }}
-        onClick={() => setPlaying((v) => !v)}
+        onClick={onToggle}
       >
         <Play size={14} fill={playing ? "#000" : "none"} />
       </button>

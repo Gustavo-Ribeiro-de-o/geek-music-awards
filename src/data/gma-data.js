@@ -139,8 +139,7 @@ const ARTISTS = [
     baseVotes: 2861,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "an1", title: "Sombras da Aurora", ref: "Naruto", duration: "3:48", cover: "🌒" },
-      { id: "an2", title: "Renegado", ref: "One Piece", duration: "4:12", cover: "🏴‍☠️" },
+      { id: "anirap-real", title: "Kaleb Overdose", duration: "0:33", cover: "🌒", url: "/audio/anirap-trecho.mp3" },
     ],
   },
   {
@@ -312,7 +311,7 @@ const ARTISTS = [
     baseVotes: 1214,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "vb1", title: "Ritual Noturno", ref: "Demon Slayer", duration: "3:11", cover: "🌘" },
+      { id: "vitchbeats-real", title: "mr bombastic", duration: "0:28", cover: "🌘", url: "/audio/vitchbeats-trecho.mp3" },
     ],
   },
   {
@@ -327,7 +326,7 @@ const ARTISTS = [
     subscriberCount: 139000,
     baseVotes: 1096,
     songs: [
-      { id: "al1", title: "Passe Livre", ref: "Haikyuu", duration: "2:49", cover: "🏐" },
+      { id: "albk-real", title: "Portador do Carnitrix", duration: "0:25", cover: "🏐", url: "/audio/albk-trecho.mp3" },
     ],
     socials: { instagram: "#", youtube: "#", twitter: "#" },
   },
@@ -344,7 +343,7 @@ const ARTISTS = [
     baseVotes: 968,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "en1", title: "Enigma da Meia-Noite", ref: "Death Note", duration: "3:33", cover: "🕯️" },
+      { id: "enygma-real", title: "Sua Agonia", duration: "0:37", cover: "🕯️", url: "/audio/enygma-trecho.mp3" },
     ],
   },
   {
@@ -359,7 +358,7 @@ const ARTISTS = [
     subscriberCount: 258000,
     baseVotes: 842,
     songs: [
-      { id: "da1", title: "Trovão Silencioso", ref: "Jujutsu Kaisen", duration: "3:18", cover: "⛈️" },
+      { id: "darui-real", title: "Amaldiçoado", duration: "0:19", cover: "⛈️", url: "/audio/darui-trecho.mp3" },
     ],
     socials: { instagram: "#", youtube: "#", twitter: "#" },
   },
@@ -376,7 +375,7 @@ const ARTISTS = [
     baseVotes: 731,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "ba1", title: "Silêncio de Ferro", ref: "Vinland Saga", duration: "3:26", cover: "⚔️" },
+      { id: "basara-real", title: "Gear 5 Luffy", duration: "0:31", cover: "⚔️", url: "/audio/basara-trecho.mp3" },
     ],
   },
   {
@@ -392,7 +391,7 @@ const ARTISTS = [
     baseVotes: 654,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "mh1", title: "Modo Convenção", ref: "My Hero Academia", duration: "2:58", cover: "🎉" },
+      { id: "mhrap-real", title: "ERO NEJI", duration: "0:21", cover: "🎉", url: "/audio/mhrap-trecho.mp3" },
     ],
   },
   {
@@ -408,7 +407,7 @@ const ARTISTS = [
     baseVotes: 589,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "he1", title: "Manhã de Verão", ref: "Anime original", duration: "3:11", cover: "☀️" },
+      { id: "henriquemendonca-real", title: "Aposta Brutal", duration: "0:23", cover: "☀️", url: "/audio/henriquemendonca-trecho.mp3" },
     ],
   },
   {
@@ -424,7 +423,7 @@ const ARTISTS = [
     baseVotes: 512,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "eo1", title: "Sombra e Luz", ref: "Tokyo Ghoul", duration: "3:34", cover: "🌘" },
+      { id: "eodan-real", title: "Sequência do Homem-Aranha", duration: "0:28", cover: "🌘", url: "/audio/eodan-trecho.mp3" },
     ],
   },
   {
@@ -440,7 +439,7 @@ const ARTISTS = [
     baseVotes: 478,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "nr1", title: "Passos Silenciosos", ref: "Naruto", duration: "3:05", cover: "🥷" },
+      { id: "ninjaraps-real", title: "Recomeço", duration: "0:31", cover: "🥷", url: "/audio/ninjaraps-trecho.mp3" },
     ],
   },
   {
@@ -456,7 +455,7 @@ const ARTISTS = [
     baseVotes: 445,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "st1", title: "De Novo do Zero", ref: "Re:Zero", duration: "3:22", cover: "🔄" },
+      { id: "secondtime-real", title: "Lua Superior 1", duration: "0:28", cover: "🔄", url: "/audio/secondtime-trecho.mp3" },
     ],
   },
   {
@@ -472,7 +471,7 @@ const ARTISTS = [
     baseVotes: 412,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "bx1", title: "Zona Cinza", ref: "Death Note", duration: "3:17", cover: "🖤" },
+      { id: "blxck-real", title: "Coral da Agonia", duration: "0:44", cover: "🖤", url: "/audio/blxck-trecho.mp3" },
     ],
   },
   {
@@ -487,7 +486,7 @@ const ARTISTS = [
     subscriberCount: 306000,
     baseVotes: 389,
     songs: [
-      { id: "nt1", title: "Esquadrão Nova", ref: "Attack on Titan", duration: "3:41", cover: "⚔️" },
+      { id: "novatroop-real", title: "Essência do Caos", duration: "0:30", cover: "⚔️", url: "/audio/novatroop-trecho.mp3" },
     ],
     socials: { instagram: "#", youtube: "#", twitter: "#" },
   },
@@ -504,7 +503,7 @@ const ARTISTS = [
     baseVotes: 367,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "pj1", title: "Rua e Pixel", ref: "Cowboy Bebop", duration: "3:09", cover: "🎧" },
+      { id: "pejota-real", title: "Donquixote Rosinante", duration: "0:42", cover: "🎧", url: "/audio/pejota-trecho.mp3" },
     ],
   },
   {
@@ -520,7 +519,7 @@ const ARTISTS = [
     baseVotes: 298,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "an3", title: "Óculos de Sol", ref: "Anime original", duration: "2:56", cover: "🕶️" },
+      { id: "anny-real", title: "Anjo Caído", duration: "0:31", cover: "🕶️", url: "/audio/anny-trecho.mp3" },
     ],
   },
   {
@@ -536,7 +535,7 @@ const ARTISTS = [
     baseVotes: 274,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "dy1", title: "Rosto Escondido", ref: "Anime original", duration: "3:02", cover: "🌕" },
+      { id: "dya-real", title: "Xeque Mate", duration: "0:32", cover: "🌕", url: "/audio/dya-trecho.mp3" },
     ],
   },
   {
@@ -564,7 +563,7 @@ const ARTISTS = [
     subscriberCount: 6520,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "st2", title: "Fé Cega", ref: "Anime original", duration: "3:08", cover: "🕯️" },
+      { id: "santo-real", title: "Trovão Cruel", duration: "0:13", cover: "🕯️", url: "/audio/santo-trecho.mp3" },
     ],
   },
   {
@@ -579,7 +578,7 @@ const ARTISTS = [
     subscriberCount: 20000,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "dn1", title: "DNA Geek", ref: "Anime original", duration: "3:15", cover: "🧬" },
+      { id: "dnrap-real", title: "Tagarelas Quebradores da 4ª Parede", duration: "0:34", cover: "🧬", url: "/audio/dnrap-trecho.mp3" },
     ],
   },
   {
@@ -594,7 +593,7 @@ const ARTISTS = [
     subscriberCount: 19000,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "ar1", title: "Arca", ref: "Anime original", duration: "3:21", cover: "🌊" },
+      { id: "ark-real", title: "Dorama", duration: "0:24", cover: "🌊", url: "/audio/ark-trecho.mp3" },
     ],
   },
   {
@@ -609,7 +608,7 @@ const ARTISTS = [
     subscriberCount: 17700,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "mx1", title: "Mito", ref: "Anime original", duration: "2:48", cover: "⚡" },
+      { id: "mxth-real", title: "SEUS SEGREDOS", duration: "0:34", cover: "⚡", url: "/audio/mxth-trecho.mp3" },
     ],
   },
   {
@@ -624,7 +623,7 @@ const ARTISTS = [
     subscriberCount: 7600,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "ne1", title: "Luz Baixa", ref: "Anime original", duration: "3:05", cover: "🌙" },
+      { id: "neshyzk-real", title: "Um Mero Lojista", duration: "0:36", cover: "🌙", url: "/audio/neshyzk-trecho.mp3" },
     ],
   },
   {
@@ -639,7 +638,7 @@ const ARTISTS = [
     subscriberCount: 7400,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "yk1", title: "Espírito da Floresta", ref: "Mushishi", duration: "3:38", cover: "👺" },
+      { id: "yokai-real", title: "Última Aposta", duration: "0:29", cover: "👺", url: "/audio/yokai-trecho.mp3" },
     ],
   },
   {
@@ -654,7 +653,7 @@ const ARTISTS = [
     subscriberCount: 23600,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "dg1", title: "Tom Sobre Tom", ref: "Anime original", duration: "2:59", cover: "🎨" },
+      { id: "degraderapz-real", title: "Penumbra", duration: "0:31", cover: "🎨", url: "/audio/degraderapz-trecho.mp3" },
     ],
   },
   {
@@ -669,7 +668,7 @@ const ARTISTS = [
     subscriberCount: 23900,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "co1", title: "Ponto de Fuga", ref: "Anime original", duration: "3:12", cover: "🎯" },
+      { id: "coliado-real", title: "Preparo Absoluto", duration: "0:34", cover: "🎯", url: "/audio/coliado-trecho.mp3" },
     ],
   },
   {
@@ -684,7 +683,7 @@ const ARTISTS = [
     subscriberCount: 18900,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "aa1", title: "Carta na Manga", ref: "Anime original", duration: "3:03", cover: "🃏" },
+      { id: "asace-real", title: "PERFEIÇÃO", duration: "0:28", cover: "🃏", url: "/audio/asace-trecho.mp3" },
     ],
   },
   {
@@ -699,7 +698,7 @@ const ARTISTS = [
     subscriberCount: 20000,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "bc1", title: "Chute de Sorte", ref: "Blue Lock", duration: "2:51", cover: "⚽" },
+      { id: "bachiramusic-real", title: "Império", duration: "0:33", cover: "⚽", url: "/audio/bachiramusic-trecho.mp3" },
     ],
   },
   {
@@ -712,7 +711,7 @@ const ARTISTS = [
     clipUrl: "/audio/orionoz-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "oo1", title: "Constelação Neon", ref: "Anime original", duration: "3:07", cover: "🌌" },
+      { id: "orionoz-real", title: "Aura de Rei", duration: "0:31", cover: "🌌", url: "/audio/orionoz-trecho.mp3" },
     ],
   },
   {
@@ -725,7 +724,7 @@ const ARTISTS = [
     clipUrl: "/audio/takeru-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "tk1", title: "Cicatriz de Fogo", ref: "Jujutsu Kaisen", duration: "3:29", cover: "🔥" },
+      { id: "takeru-real", title: "Erro", duration: "0:32", cover: "🔥", url: "/audio/takeru-trecho.mp3" },
     ],
   },
   {
@@ -749,7 +748,7 @@ const ARTISTS = [
     clipUrl: "/audio/vgbeats-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "vg1", title: "Extra Life", ref: "Anime original", duration: "2:58", cover: "🎮" },
+      { id: "vgbeats-real", title: "Herói Odiado", duration: "0:30", cover: "🎮", url: "/audio/vgbeats-trecho.mp3" },
     ],
   },
   {
@@ -762,7 +761,7 @@ const ARTISTS = [
     clipUrl: "/audio/tkraps-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "tr1", title: "Chamas Cacheadas", ref: "Anime original", duration: "3:11", cover: "🔥" },
+      { id: "tkraps-real", title: "EU SOU DEUS", duration: "0:39", cover: "🔥", url: "/audio/tkraps-trecho.mp3" },
     ],
   },
   {
@@ -775,7 +774,7 @@ const ARTISTS = [
     clipUrl: "/audio/feliciarock-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "fr1", title: "Coroa de Espinhos", ref: "Anime original", duration: "3:24", cover: "🌹" },
+      { id: "feliciarock-real", title: "KARMA", duration: "0:23", cover: "🌹", url: "/audio/feliciarock-trecho.mp3" },
     ],
   },
   {
@@ -788,7 +787,7 @@ const ARTISTS = [
     clipUrl: "/audio/shooter_sz-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "sh1", title: "Olhar Sombrio", ref: "Anime original", duration: "3:16", cover: "🌑" },
+      { id: "shooter_sz-real", title: "PSICOSE", duration: "0:25", cover: "🌑", url: "/audio/shooter_sz-trecho.mp3" },
     ],
   },
   {
@@ -801,7 +800,7 @@ const ARTISTS = [
     clipUrl: "/audio/gabriza-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "gb1", title: "Nova Fase", ref: "Anime original", duration: "3:05", cover: "🌀" },
+      { id: "gabriza-real", title: "CONQUISTA", duration: "0:16", cover: "🌀", url: "/audio/gabriza-trecho.mp3" },
     ],
   },
   {
@@ -814,7 +813,7 @@ const ARTISTS = [
     clipUrl: "/audio/papyrusdabatata-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "pb1", title: "Bater os Ossos", ref: "Undertale", duration: "2:47", cover: "🦴" },
+      { id: "papyrusdabatata-real", title: "Mundo Sem Cor", duration: "0:35", cover: "🦴", url: "/audio/papyrusdabatata-trecho.mp3" },
     ],
   },
   {
@@ -827,7 +826,7 @@ const ARTISTS = [
     clipUrl: "/audio/ironmaster-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "im1", title: "Armadura de Aço", ref: "Fullmetal Alchemist", duration: "3:22", cover: "⚙️" },
+      { id: "ironmaster-real", title: "Relógio Esquisito", duration: "0:36", cover: "⚙️", url: "/audio/ironmaster-trecho.mp3" },
     ],
   },
   {
@@ -840,7 +839,7 @@ const ARTISTS = [
     clipUrl: "/audio/vmz-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "vm1", title: "Sigla", ref: "Anime original", duration: "2:53", cover: "🔤" },
+      { id: "vmz-real", title: "Bad End Friends", duration: "0:43", cover: "🔤", url: "/audio/vmz-trecho.mp3" },
     ],
   },
   {
@@ -853,7 +852,7 @@ const ARTISTS = [
     clipUrl: "/audio/wlo-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "wl1", title: "Três Letras", ref: "Anime original", duration: "3:01", cover: "🔠" },
+      { id: "wlo-real", title: "Conquistador", duration: "0:29", cover: "🔠", url: "/audio/wlo-trecho.mp3" },
     ],
   },
   {
@@ -866,7 +865,7 @@ const ARTISTS = [
     clipUrl: "/audio/playertauz-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "pt1", title: "Continue?", ref: "Anime original", duration: "2:59", cover: "🕹️" },
+      { id: "playertauz-real", title: "ZABUZA", duration: "0:21", cover: "🕹️", url: "/audio/playertauz-trecho.mp3" },
     ],
   },
   {
@@ -879,7 +878,7 @@ const ARTISTS = [
     clipUrl: "/audio/rodrigozin-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "rz1", title: "De Onde Vim", ref: "Anime original", duration: "3:18", cover: "🧭" },
+      { id: "rodrigozin-real", title: "Sengoku", duration: "0:28", cover: "🧭", url: "/audio/rodrigozin-trecho.mp3" },
     ],
   },
   {
@@ -892,7 +891,7 @@ const ARTISTS = [
     clipUrl: "/audio/raphyx-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "rp1", title: "Camada Fina", ref: "Anime original", duration: "3:06", cover: "✨" },
+      { id: "raphyx-real", title: "Forasteiro", duration: "0:27", cover: "✨", url: "/audio/raphyx-trecho.mp3" },
     ],
   },
   {
@@ -905,7 +904,7 @@ const ARTISTS = [
     clipUrl: "/audio/neko-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "nk1", title: "Miado Suave", ref: "Anime original", duration: "2:44", cover: "🐱" },
+      { id: "neko-real", title: "Travessuras", duration: "0:31", cover: "🐱", url: "/audio/neko-trecho.mp3" },
     ],
   },
   {
@@ -918,7 +917,7 @@ const ARTISTS = [
     clipUrl: "/audio/akinno-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "ak1", title: "Marca Própria", ref: "Anime original", duration: "3:09", cover: "🏷️" },
+      { id: "akinno-real", title: "Actor Perfecto", duration: "0:30", cover: "🏷️", url: "/audio/akinno-trecho.mp3" },
     ],
   },
   {
@@ -931,7 +930,7 @@ const ARTISTS = [
     clipUrl: "/audio/mistery-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "ms1", title: "Enigma", ref: "Anime original", duration: "3:13", cover: "🔮" },
+      { id: "mistery-real", title: "Inverno Infernal", duration: "0:39", cover: "🔮", url: "/audio/mistery-trecho.mp3" },
     ],
   },
   {
@@ -944,7 +943,7 @@ const ARTISTS = [
     clipUrl: "/audio/shiny_sz-trecho.mp3",
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "sy1", title: "Reflexo de Luz", ref: "Anime original", duration: "2:56", cover: "💫" },
+      { id: "shiny_sz-real", title: "Rota da Ira", duration: "0:34", cover: "💫", url: "/audio/shiny_sz-trecho.mp3" },
     ],
   },
   {
