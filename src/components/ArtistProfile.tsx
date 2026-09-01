@@ -62,7 +62,11 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
 
       <div className="artist-profile__grid">
         <div>
-          <Reveal><p className="muted">{artist.bio}</p></Reveal>
+          <Reveal>
+            <p className="muted">
+              Você pode votar em <strong style={{ color: "var(--white)" }}>{artist.name}</strong> para ele ser eleito o melhor artista da categoria.
+            </p>
+          </Reveal>
           <Reveal delay={80}>
             <div className="socials">
               <a href={artist.socials?.instagram} className="social-icon"><Instagram size={16} /></a>
