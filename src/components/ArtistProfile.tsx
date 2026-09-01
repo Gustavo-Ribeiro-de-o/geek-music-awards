@@ -113,7 +113,13 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
 function SongRow({ song, color, playing, onToggle }: { song: any; color: string; playing: boolean; onToggle: () => void }) {
   return (
     <div className="song-row">
-      <div className="song-row__cover" style={{ background: `${color}22` }}>{song.cover}</div>
+      <div className="song-row__cover" style={{ background: `${color}22` }}>
+        {typeof song.cover === "string" && song.cover.startsWith("data:image") ? (
+          <img src={song.cover} alt="" className="song-row__cover-img" />
+        ) : (
+          song.cover
+        )}
+      </div>
       <div className="song-row__info">
         <span className="song-row__title">{song.title}</span>
         <span className="muted small">{song.ref}</span>
