@@ -947,12 +947,13 @@ const ARTISTS = [
     bio: "Tec surgiu batendo de frente com nomes consagrados da cena, impondo respeito com barras técnicas e um olhar de gelo no palco. Atualmente seu canal conta com 84,2 mil inscritos.",
     color: "#2563eb", accent: "#60a5fa",
     photo: TEC_PHOTO,
+    clipTitle: "Herói Vulgar",
+    clipUrl: "/audio/tec-trecho.mp3",
     subscribers: "84,2 mil inscritos",
     subscriberCount: 84200,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "tec1", title: "Olhar de Aço", ref: "Anime original", duration: "3:21", cover: "⚔️" },
-      { id: "tec2", title: "Sangue Frio", ref: "Bleach", duration: "3:05", cover: "🗡️" },
+      { id: "tec-real", title: "Herói Vulgar", duration: "0:17", cover: "⚔️", url: "/audio/tec-trecho.mp3" },
     ],
   },
   {
@@ -976,12 +977,13 @@ const ARTISTS = [
     bio: "nikmouu une R&B contemporâneo a referências geek, cantando sobre paixões e universos fictícios com uma voz marcante. Atualmente seu canal conta com 91,3 mil inscritos.",
     color: "#ec4899", accent: "#f9a8d4",
     photo: NIKMOUU_PHOTO,
+    clipTitle: "Cacos de Mim",
+    clipUrl: "/audio/nikmouu-trecho.mp3",
     subscribers: "91,3 mil inscritos",
     subscriberCount: 91300,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "nik1", title: "Sob a Lua Cheia", ref: "Anime original", duration: "3:34", cover: "🌙" },
-      { id: "nik2", title: "Batom Vermelho", ref: "Anime original", duration: "3:11", cover: "💋" },
+      { id: "nikmouu-real", title: "Cacos de Mim", duration: "0:27", cover: "🌙", url: "/audio/nikmouu-trecho.mp3" },
     ],
   },
   {
@@ -990,12 +992,13 @@ const ARTISTS = [
     bio: "LHZ é conhecido por transformar cenas icônicas de anime em rap cômico, sem perder o flow técnico. Atualmente seu canal conta com 33,9 mil inscritos.",
     color: "#f97316", accent: "#fdba74",
     photo: LHZ_PHOTO,
+    clipTitle: "Restrição",
+    clipUrl: "/audio/lhz-trecho.mp3",
     subscribers: "33,9 mil inscritos",
     subscriberCount: 33900,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "lhz1", title: "Bowl de Arroz", ref: "Dragon Ball", duration: "2:39", cover: "🍚" },
-      { id: "lhz2", title: "Kamehameha do Riso", ref: "Dragon Ball", duration: "3:00", cover: "😂" },
+      { id: "lhz-real", title: "Restrição", duration: "0:30", cover: "🍚", url: "/audio/lhz-trecho.mp3" },
     ],
   },
   {

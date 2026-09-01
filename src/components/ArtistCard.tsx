@@ -48,7 +48,7 @@ export function ArtistCard({ artist, votingOpen }: { artist: Artist; votingOpen:
                 "Ouça um trecho:"
               )}
             </p>
-            <audio controls preload="none" src={artist.clipUrl} className="artist-card__audio" />
+            <audio controls preload="metadata" src={artist.clipUrl} className="artist-card__audio" />
           </div>
         ) : (
           <p className="muted small">{artist.short}</p>
