@@ -548,11 +548,13 @@ const ARTISTS = [
     bio: "Ravanello vem construindo sua base de fãs com um rap geek autêntico e sem filtro. Atualmente seu canal conta com 5,65 mil inscritos.",
     color: "#a855f7", accent: "#d8b4fe",
     photo: RAVANELLO_PHOTO,
+    clipTitle: "Coração Perdido",
+    clipUrl: "/audio/ravanello-trecho.mp3",
     subscribers: "5,65 mil inscritos",
     subscriberCount: 5650,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "rv1", title: "Começo de Tudo", ref: "Anime original", duration: "2:54", cover: "🌱" },
+      { id: "ravanello-real", title: "Coração Perdido", duration: "0:27", cover: "🌱", url: "/audio/ravanello-trecho.mp3" },
     ],
   },
   {
@@ -1113,12 +1115,13 @@ const ARTISTS = [
     bio: "jiorzin virou meme e artista ao mesmo tempo, unindo trap geek a um humor bem brasileiro e referências de heróis urbanos. Atualmente seu canal conta com 36,5 mil inscritos.",
     color: "#dc2626", accent: "#f87171",
     photo: JIORZIN_PHOTO,
+    clipTitle: "Olha pro Pai",
+    clipUrl: "/audio/jiorzin-trecho.mp3",
     subscribers: "36,5 mil inscritos",
     subscriberCount: 36500,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "jio1", title: "Teia de Aranha", ref: "Anime original", duration: "2:44", cover: "🕸️" },
-      { id: "jio2", title: "Bigode de Herói", ref: "Anime original", duration: "3:01", cover: "😎" },
+      { id: "jiorzin-real", title: "Olha pro Pai", duration: "0:30", cover: "🕸️", url: "/audio/jiorzin-trecho.mp3" },
     ],
   },
   {
@@ -1127,12 +1130,13 @@ const ARTISTS = [
     bio: "Theuz traz uma pegada épica e guerreira, com letras sobre batalhas e destino inspiradas em RPGs e animes de fantasia. Atualmente seu canal conta com 69,4 mil inscritos.",
     color: "#b91c1c", accent: "#f87171",
     photo: THEUZ_PHOTO,
+    clipTitle: "Sem Correntes",
+    clipUrl: "/audio/theuz-trecho.mp3",
     subscribers: "69,4 mil inscritos",
     subscriberCount: 69400,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "thz1", title: "Espadas Infinitas", ref: "Fate/stay night", duration: "3:33", cover: "⚔️" },
-      { id: "thz2", title: "Servo do Destino", ref: "Fate/stay night", duration: "3:19", cover: "🛡️" },
+      { id: "theuz-real", title: "Sem Correntes", duration: "0:37", cover: "⚔️", url: "/audio/theuz-trecho.mp3" },
     ],
   },
 ];
