@@ -3,8 +3,23 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { checkRateLimit } from "@/lib/rateLimit";
+import { ARTISTS, MAIN_MIN_SUBSCRIBERS, REVELACAO_MAX_SUBSCRIBERS } from "@/data/gma-data";
 
-const MAX_VOTES_PER_CATEGORY = Number(process.env.MAX_VOTES_PER_USER ?? "3");
+const MAX_VOTES_PER_TIER = Number(process.env.MAX_VOTES_PER_USER ?? "5");
+
+type Tier = "artistas" | "prodigios" | "revelacoes";
+
+function getTier(subscriberCount: number | undefined): Tier {
+  if (subscriberCount === undefined || subscriberCount >= MAIN_MIN_SUBSCRIBERS) return "artistas";
+  if (subscriberCount > REVELACAO_MAX_SUBSCRIBERS) return "prodigios";
+  return "revelacoes";
+}
+
+const TIER_LABEL: Record<Tier, string> = {
+  artistas: "Artistas",
+  prodigios: "Prodígios",
+  revelacoes: "Revelações",
+};
 
 export async function POST(req: NextRequest) {
   // 1. Precisa estar logado — sem sessão, sem voto. Esse é o ponto central:
@@ -40,18 +55,34 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Artista ou categoria não encontrados." }, { status: 404 });
   }
 
-  // 3. Confere quantos votos esse usuário já usou NESSA categoria — o limite
-  // (ex: 3 votos) é por categoria, não um total somando todas juntas.
-  const votesInCategory = await prisma.vote.count({ where: { userId, categoryId: category.id } });
-  if (votesInCategory >= MAX_VOTES_PER_CATEGORY) {
+  // 3. Descobre a faixa (Artistas / Prodígios / Revelações) do artista alvo
+  // a partir dos dados estáticos (subscriberCount não fica no banco), e reúne
+  // os slugs de todos os artistas dessa mesma faixa.
+  const staticArtist = ARTISTS.find((a: any) => a.slug === artistSlug);
+  const tier = getTier(staticArtist?.subscriberCount);
+  const tierSlugs = ARTISTS.filter((a: any) => getTier(a.subscriberCount) === tier).map((a: any) => a.slug);
+
+  const tierArtists = await prisma.artist.findMany({
+    where: { slug: { in: tierSlugs } },
+    select: { id: true },
+  });
+  const tierArtistIds = tierArtists.map((a) => a.id);
+
+  // 4. Confere quantos votos esse usuário já usou nessa FAIXA de artista,
+  // somando todas as categorias de premiação — o limite (ex: 5 votos) vale
+  // por faixa (Artistas / Prodígios / Revelações), não por categoria isolada.
+  const votesInTier = await prisma.vote.count({
+    where: { userId, artistId: { in: tierArtistIds } },
+  });
+  if (votesInTier >= MAX_VOTES_PER_TIER) {
     return NextResponse.json(
-      { error: `Você já usou seus ${MAX_VOTES_PER_CATEGORY} votos disponíveis na categoria ${category.name}.` },
+      { error: `Você já usou seus ${MAX_VOTES_PER_TIER} votos disponíveis na faixa ${TIER_LABEL[tier]}.` },
       { status: 409 }
     );
   }
 
   try {
-    // 4. A constraint única (userId + artistId + categoryId) no banco garante
+    // 5. A constraint única (userId + artistId + categoryId) no banco garante
     // que, mesmo com requisições simultâneas, o mesmo usuário não consegue
     // votar duas vezes no mesmo artista dentro da mesma categoria.
     const vote = await prisma.vote.create({
