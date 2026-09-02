@@ -64,7 +64,7 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
         <div>
           <Reveal>
             <p className="muted">
-              Você pode votar em <strong style={{ color: "var(--white)" }}>{artist.name}</strong> para ele ser eleito o melhor artista da categoria.
+              Você pode votar em <strong style={{ color: "var(--white)" }}>{artist.name}</strong> para que ele seja eleito o melhor artista em sua categoria.
             </p>
           </Reveal>
           <Reveal delay={80}>
