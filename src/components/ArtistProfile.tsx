@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Instagram, Youtube, Twitter, Crown, Play } from "lucide-react";
+import { Instagram, Crown, Play } from "lucide-react";
 import { Reveal } from "./ui";
 import { useVote } from "./VoteProvider";
 
@@ -70,8 +70,6 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
           <Reveal delay={80}>
             <div className="socials">
               <a href={artist.socials?.instagram} target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram size={16} /></a>
-              <a href={artist.socials?.youtube} target="_blank" rel="noopener noreferrer" className="social-icon"><Youtube size={16} /></a>
-              <a href={artist.socials?.twitter} target="_blank" rel="noopener noreferrer" className="social-icon"><Twitter size={16} /></a>
             </div>
           </Reveal>
 
