@@ -4,7 +4,7 @@ import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { checkRateLimit } from "@/lib/rateLimit";
 
-const MAX_VOTES_PER_USER = Number(process.env.MAX_VOTES_PER_USER ?? "3");
+const MAX_VOTES_PER_CATEGORY = Number(process.env.MAX_VOTES_PER_USER ?? "3");
 
 export async function POST(req: NextRequest) {
   // 1. Precisa estar logado — sem sessão, sem voto. Esse é o ponto central:
@@ -40,12 +40,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Artista ou categoria não encontrados." }, { status: 404 });
   }
 
-  // 3. Confere quantos votos esse usuário já usou no total, somando todas
-  // as categorias — o limite geral (ex: 3 votos) é por usuário, não por navegador.
-  const totalVotes = await prisma.vote.count({ where: { userId } });
-  if (totalVotes >= MAX_VOTES_PER_USER) {
+  // 3. Confere quantos votos esse usuário já usou NESSA categoria — o limite
+  // (ex: 3 votos) é por categoria, não um total somando todas juntas.
+  const votesInCategory = await prisma.vote.count({ where: { userId, categoryId: category.id } });
+  if (votesInCategory >= MAX_VOTES_PER_CATEGORY) {
     return NextResponse.json(
-      { error: `Você já usou seus ${MAX_VOTES_PER_USER} votos disponíveis.` },
+      { error: `Você já usou seus ${MAX_VOTES_PER_CATEGORY} votos disponíveis na categoria ${category.name}.` },
       { status: 409 }
     );
   }
