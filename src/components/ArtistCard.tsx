@@ -3,6 +3,18 @@
 import Link from "next/link";
 import { useVote } from "./VoteProvider";
 
+// Garante que só um player toque por vez entre todos os cards da página:
+// ao começar a tocar um, pausa o que estava tocando antes.
+let activeCardAudio: HTMLAudioElement | null = null;
+
+function handleCardAudioPlay(e: React.SyntheticEvent<HTMLAudioElement>) {
+  const audio = e.currentTarget;
+  if (activeCardAudio && activeCardAudio !== audio) {
+    activeCardAudio.pause();
+  }
+  activeCardAudio = audio;
+}
+
 type Artist = {
   id: string;
   slug: string;
@@ -48,7 +60,7 @@ export function ArtistCard({ artist, votingOpen }: { artist: Artist; votingOpen:
                 "Ouça um trecho:"
               )}
             </p>
-            <audio controls preload="metadata" src={artist.clipUrl} className="artist-card__audio" />
+            <audio controls preload="metadata" src={artist.clipUrl} className="artist-card__audio" onPlay={handleCardAudioPlay} />
           </div>
         ) : (
           <p className="muted small">{artist.short}</p>
