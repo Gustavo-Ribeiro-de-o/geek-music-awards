@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Instagram, Youtube, Twitter, Crown, Play } from "lucide-react";
 import { Reveal } from "./ui";
 import { useVote } from "./VoteProvider";
-import { TROPHY_IMAGE_URL } from "@/data/gma-data";
 
 export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen: boolean }) {
   const { openVote } = useVote();
@@ -108,10 +107,6 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
             ) : (
               <span className="badge badge--closed" style={{ marginTop: "1rem" }}>Votação encerrada</span>
             )}
-            <div className="trophy-banner trophy-banner--side">
-              <img src={TROPHY_IMAGE_URL} alt="Prêmio Geek Music Awards" className="trophy-banner__img" />
-              <p className="trophy-banner__caption">Você pode premiar seu artista votando nele!</p>
-            </div>
           </div>
         </Reveal>
       </div>
