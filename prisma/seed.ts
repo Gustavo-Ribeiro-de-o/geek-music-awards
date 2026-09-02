@@ -17,7 +17,7 @@ const ARTISTS = [
   { slug: "vitchbeats", name: "VitchBeats" },
   { slug: "albk", name: "ALBK" },
   { slug: "enygma", name: "Enygma" },
-  { slug: "darui", name: "Darui" },
+  { slug: "darui", name: "Daarui" },
   { slug: "basara", name: "Basara" },
   { slug: "mhrap", name: "MHRAP" },
   { slug: "henrique-mendonca", name: "Henrique Mendonça" },

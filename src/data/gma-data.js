@@ -352,7 +352,7 @@ const ARTISTS = [
     ],
   },
   {
-    id: "darui", slug: "darui", name: "Darui", genre: "Rap Geek",
+    id: "darui", slug: "darui", name: "Daarui", genre: "Rap Geek",
     short: "Voz grave e cadência pesada — o rap geek com peso de arena.",
     bio: "Darui é conhecido pela voz grave e cadência marcante, levando um peso quase épico pras batalhas de rima geek. Atualmente seu canal conta com 258 mil inscritos.",
     color: "#ef4444", accent: "#f87171",
