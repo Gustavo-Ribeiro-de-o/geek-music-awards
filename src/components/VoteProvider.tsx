@@ -140,7 +140,7 @@ function VoteModal({
             <Trophy size={28} />
           </div>
           <h3>Em qual categoria você quer votar em {artist.name}?</h3>
-          <p className="muted">Cada categoria conta como um voto separado dos seus votos disponíveis.</p>
+          <p className="muted">Você pode votar em até 3 artistas diferentes em cada categoria.</p>
           <div className="vote-category-list">
             {VOTE_CATEGORIES.map((cat: VoteCategory) => (
               <button
