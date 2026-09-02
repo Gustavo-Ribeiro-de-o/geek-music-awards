@@ -69,9 +69,9 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
           </Reveal>
           <Reveal delay={80}>
             <div className="socials">
-              <a href={artist.socials?.instagram} className="social-icon"><Instagram size={16} /></a>
-              <a href={artist.socials?.youtube} className="social-icon"><Youtube size={16} /></a>
-              <a href={artist.socials?.twitter} className="social-icon"><Twitter size={16} /></a>
+              <a href={artist.socials?.instagram} target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram size={16} /></a>
+              <a href={artist.socials?.youtube} target="_blank" rel="noopener noreferrer" className="social-icon"><Youtube size={16} /></a>
+              <a href={artist.socials?.twitter} target="_blank" rel="noopener noreferrer" className="social-icon"><Twitter size={16} /></a>
             </div>
           </Reveal>
 
