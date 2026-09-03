@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Calendar, Bell, Tv, MapPin, Radio, Clock } from "lucide-react";
+import { Calendar, Bell, Tv, Radio, Clock } from "lucide-react";
 import { Reveal, CountdownBlock } from "@/components/ui";
 import { DEFAULT_SETTINGS } from "@/data/gma-data";
 
@@ -33,15 +33,6 @@ export default function EventPage() {
       </Reveal>
 
       <div className="event-details">
-        <Reveal delay={120}>
-          <div className="card info-card">
-            <MapPin size={18} />
-            <div>
-              <span className="muted small">Local</span>
-              <p>{settings.eventLocation}</p>
-            </div>
-          </div>
-        </Reveal>
         <Reveal delay={160}>
           <div className="card info-card">
             <Radio size={18} />
