@@ -568,7 +568,7 @@ const ARTISTS = [
     clipUrl: "/audio/santo-trecho.mp3",
     subscribers: "6,54 mil inscritos",
     subscriberCount: 6540,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/santomusics", youtube: "#", twitter: "#" },
     songs: [
       { id: "santo-real", title: "Trovão Cruel", duration: "0:13", cover: "🕯️", url: "/audio/santo-trecho.mp3" },
     ],
@@ -583,7 +583,7 @@ const ARTISTS = [
     clipUrl: "/audio/dnrap-trecho.mp3",
     subscribers: "22,4 mil inscritos",
     subscriberCount: 22400,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/dnrap_ofc", youtube: "#", twitter: "#" },
     songs: [
       { id: "dnrap-real", title: "Tagarelas Quebradores da 4ª Parede", duration: "0:34", cover: "🧬", url: "/audio/dnrap-trecho.mp3" },
     ],
@@ -598,7 +598,7 @@ const ARTISTS = [
     clipUrl: "/audio/ark-trecho.mp3",
     subscribers: "24,4 mil inscritos",
     subscriberCount: 24400,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/ark.king5", youtube: "#", twitter: "#" },
     songs: [
       { id: "ark-real", title: "Dorama", duration: "0:24", cover: "🌊", url: "/audio/ark-trecho.mp3" },
     ],
@@ -613,7 +613,7 @@ const ARTISTS = [
     clipUrl: "/audio/mxth-trecho.mp3",
     subscribers: "18,5 mil inscritos",
     subscriberCount: 18500,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/mxthoficial", youtube: "#", twitter: "#" },
     songs: [
       { id: "mxth-real", title: "SEUS SEGREDOS", duration: "0:34", cover: "⚡", url: "/audio/mxth-trecho.mp3" },
     ],
@@ -628,7 +628,7 @@ const ARTISTS = [
     clipUrl: "/audio/neshyzk-trecho.mp3",
     subscribers: "7,65 mil inscritos",
     subscriberCount: 7650,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/neshyzzk", youtube: "#", twitter: "#" },
     songs: [
       { id: "neshyzk-real", title: "Um Mero Lojista", duration: "0:36", cover: "🌙", url: "/audio/neshyzk-trecho.mp3" },
     ],
@@ -643,7 +643,7 @@ const ARTISTS = [
     clipUrl: "/audio/yokai-trecho.mp3",
     subscribers: "7,73 mil inscritos",
     subscriberCount: 7730,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/yokaidogeek", youtube: "#", twitter: "#" },
     songs: [
       { id: "yokai-real", title: "Última Aposta", duration: "0:29", cover: "👺", url: "/audio/yokai-trecho.mp3" },
     ],
@@ -658,7 +658,7 @@ const ARTISTS = [
     clipUrl: "/audio/degraderapz-trecho.mp3",
     subscribers: "23,7 mil inscritos",
     subscriberCount: 23700,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/degraderapz_oficial", youtube: "#", twitter: "#" },
     songs: [
       { id: "degraderapz-real", title: "Penumbra", duration: "0:31", cover: "🎨", url: "/audio/degraderapz-trecho.mp3" },
     ],
@@ -673,7 +673,7 @@ const ARTISTS = [
     clipUrl: "/audio/coliado-trecho.mp3",
     subscribers: "25,7 mil inscritos",
     subscriberCount: 25700,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/coliadoficial", youtube: "#", twitter: "#" },
     songs: [
       { id: "coliado-real", title: "Preparo Absoluto", duration: "0:34", cover: "🎯", url: "/audio/coliado-trecho.mp3" },
     ],
@@ -688,7 +688,7 @@ const ARTISTS = [
     clipUrl: "/audio/asace-trecho.mp3",
     subscribers: "19 mil inscritos",
     subscriberCount: 19000,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/as.aceofc", youtube: "#", twitter: "#" },
     songs: [
       { id: "asace-real", title: "PERFEIÇÃO", duration: "0:28", cover: "🃏", url: "/audio/asace-trecho.mp3" },
     ],
@@ -703,7 +703,7 @@ const ARTISTS = [
     clipUrl: "/audio/bachiramusic-trecho.mp3",
     subscribers: "20,6 mil inscritos",
     subscriberCount: 20600,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/bachiraofc", youtube: "#", twitter: "#" },
     songs: [
       { id: "bachiramusic-real", title: "Império", duration: "0:33", cover: "⚽", url: "/audio/bachiramusic-trecho.mp3" },
     ],
