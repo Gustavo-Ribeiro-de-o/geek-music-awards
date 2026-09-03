@@ -988,7 +988,7 @@ const ARTISTS = [
     clipUrl: "/audio/tec-trecho.mp3",
     subscribers: "40,6 mil inscritos",
     subscriberCount: 40600,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/mixbytec", youtube: "#", twitter: "#" },
     songs: [
       { id: "tec-real", title: "Herói Vulgar", duration: "0:17", cover: "⚔️", url: "/audio/tec-trecho.mp3" },
     ],
@@ -1033,7 +1033,7 @@ const ARTISTS = [
     clipUrl: "/audio/lhz-trecho.mp3",
     subscribers: "47,5 mil inscritos",
     subscriberCount: 47500,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/lhz.ofc", youtube: "#", twitter: "#" },
     songs: [
       { id: "lhz-real", title: "Restrição", duration: "0:30", cover: "🍚", url: "/audio/lhz-trecho.mp3" },
     ],
@@ -1048,7 +1048,7 @@ const ARTISTS = [
     clipUrl: "/audio/igris-trecho.mp3",
     subscribers: "81,3 mil inscritos",
     subscriberCount: 81300,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/igrissxx", youtube: "#", twitter: "#" },
     songs: [
       { id: "igris-real", title: "Traição de Sangue", duration: "0:33", cover: "🖤", url: "/audio/igris-trecho.mp3" },
     ],
@@ -1063,7 +1063,7 @@ const ARTISTS = [
     clipUrl: "/audio/hawky-trecho.mp3",
     subscribers: "52,2 mil inscritos",
     subscriberCount: 52200,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/hawky_ofc", youtube: "#", twitter: "#" },
     songs: [
       { id: "hawky-real", title: "CHAMAS", duration: "0:35", cover: "🗡️", url: "/audio/hawky-trecho.mp3" },
     ],
@@ -1078,7 +1078,7 @@ const ARTISTS = [
     clipUrl: "/audio/slowgm-trecho.mp3",
     subscribers: "84,5 mil inscritos",
     subscriberCount: 84500,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/slow_cof", youtube: "#", twitter: "#" },
     songs: [
       { id: "slowgm-real", title: "Mas Que Ironia", duration: "0:16", cover: "⚡", url: "/audio/slowgm-trecho.mp3" },
     ],
@@ -1093,7 +1093,7 @@ const ARTISTS = [
     clipUrl: "/audio/ranori-trecho.mp3",
     subscribers: "66,9 mil inscritos",
     subscriberCount: 66900,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/ranori.wav", youtube: "#", twitter: "#" },
     songs: [
       { id: "ranori-real", title: "Intercessão", duration: "0:30", cover: "🔥", url: "/audio/ranori-trecho.mp3" },
     ],
@@ -1108,7 +1108,7 @@ const ARTISTS = [
     clipUrl: "/audio/kaji-trecho.mp3",
     subscribers: "64,8 mil inscritos",
     subscriberCount: 64800,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/kajirap", youtube: "#", twitter: "#" },
     songs: [
       { id: "kaji-real", title: "CARECA ATRAI DANADAS", duration: "0:42", cover: "🎭", url: "/audio/kaji-trecho.mp3" },
     ],
@@ -1123,7 +1123,7 @@ const ARTISTS = [
     clipUrl: "/audio/duelista-trecho.mp3",
     subscribers: "94,1 mil inscritos",
     subscriberCount: 94100,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/duelist4", youtube: "#", twitter: "#" },
     songs: [
       { id: "duelista-real", title: "Fênix Imortal", duration: "0:34", cover: "🃏", url: "/audio/duelista-trecho.mp3" },
     ],
@@ -1138,7 +1138,7 @@ const ARTISTS = [
     clipUrl: "/audio/mands-trecho.mp3",
     subscribers: "79,1 mil inscritos",
     subscriberCount: 79100,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/mands.oofc", youtube: "#", twitter: "#" },
     songs: [
       { id: "mands-real", title: "Nobara Kugisaki", duration: "0:14", cover: "⚙️", url: "/audio/mands-trecho.mp3" },
     ],
@@ -1153,7 +1153,7 @@ const ARTISTS = [
     clipUrl: "/audio/blazerapper-trecho.mp3",
     subscribers: "53,2 mil inscritos",
     subscriberCount: 53200,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/d_blazeofficial", youtube: "#", twitter: "#" },
     songs: [
       { id: "blazerapper-real", title: "Predador", duration: "0:21", cover: "🔥", url: "/audio/blazerapper-trecho.mp3" },
     ],
@@ -1168,7 +1168,7 @@ const ARTISTS = [
     clipUrl: "/audio/jiorzin-trecho.mp3",
     subscribers: "66,4 mil inscritos",
     subscriberCount: 66400,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/jiorzin", youtube: "#", twitter: "#" },
     songs: [
       { id: "jiorzin-real", title: "Olha pro Pai", duration: "0:30", cover: "🕸️", url: "/audio/jiorzin-trecho.mp3" },
     ],
@@ -1183,7 +1183,7 @@ const ARTISTS = [
     clipUrl: "/audio/theuz-trecho.mp3",
     subscribers: "60,2 mil inscritos",
     subscriberCount: 60200,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    socials: { instagram: "https://www.instagram.com/_theuzoficial", youtube: "#", twitter: "#" },
     songs: [
       { id: "theuz-real", title: "Sem Correntes", duration: "0:37", cover: "⚔️", url: "/audio/theuz-trecho.mp3" },
     ],
