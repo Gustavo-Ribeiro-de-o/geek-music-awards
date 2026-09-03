@@ -12,6 +12,7 @@ const LINKS: [string, string][] = [
   ["/prodigios", "Prodígios"],
   ["/categorias", "Categorias"],
   ["/evento", "Evento"],
+  ["/projetos-2027", "Projetos 2027"],
 ];
 
 export function GmaHeader() {
