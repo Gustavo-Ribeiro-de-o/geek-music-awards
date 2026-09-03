@@ -294,13 +294,14 @@ const ARTISTS = [
     bio: "TakaB veio da bateria de rimas de rua e adaptou o estilo cru pra falar sobre a cultura geek com autenticidade. Atualmente seu canal conta com 175 mil inscritos.",
     color: "#a855f7", accent: "#c084fc",
     photo: TAKAB_PHOTO,
+    clipTitle: "Outra Carta ao Tempo",
     clipUrl: "/audio/takab-trecho.mp3",
     subscribers: "177 mil inscritos",
     subscriberCount: 177000,
     baseVotes: 1339,
     socials: { instagram: "https://www.instagram.com/takab_oficial", youtube: "#", twitter: "#" },
     songs: [
-      { id: "tb1", title: "Vida Loka Geek", ref: "My Hero Academia", duration: "3:02", cover: "💥" },
+      { id: "takab-real", title: "Outra Carta ao Tempo", duration: "0:30", cover: "💥", url: "/audio/takab-trecho.mp3" },
     ],
   },
   {
