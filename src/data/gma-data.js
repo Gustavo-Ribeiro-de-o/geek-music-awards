@@ -1218,7 +1218,7 @@ const DEFAULT_SETTINGS = {
   votingEndsAt: new Date("2026-12-19T19:00:00-03:00").toISOString(),
   votesPerUser: 3,
   eventDate: new Date("2026-12-19T19:00:00-03:00").toISOString(),
-  eventLocation: "Arena Geek — São Paulo/SP",
+  eventLocation: "Indefinido",
   eventBroadcast: "YouTube • Twitch • GMA App",
   schedule: [
     { time: "19:00", label: "Tapete roxo e recepção" },
