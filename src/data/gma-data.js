@@ -576,6 +576,21 @@ const ARTISTS = [
     ],
   },
   {
+    id: "bachiramusic", slug: "bachira-music", name: "Bachira Music", genre: "Pop",
+    short: "Energia solta e refrão animado — pop geek feito pra tocar em convenção.",
+    bio: "Bachira Music traz um pop geek animado, com energia solta que contagia o público das convenções. Atualmente seu canal conta com 20 mil inscritos.",
+    color: "#22d3ee", accent: "#67e8f9",
+    photo: BACHIRAMUSIC_PHOTO,
+    clipTitle: "Império",
+    clipUrl: "/audio/bachiramusic-trecho.mp3",
+    subscribers: "20,6 mil inscritos",
+    subscriberCount: 20600,
+    socials: { instagram: "https://www.instagram.com/bachiraofc", youtube: "#", twitter: "#" },
+    songs: [
+      { id: "bachiramusic-real", title: "Império", duration: "0:33", cover: "⚽", url: "/audio/bachiramusic-trecho.mp3" },
+    ],
+  },
+  {
     id: "dnrap", slug: "dnrap", name: "DNRAP", genre: "Rap Geek",
     short: "Barra técnica e referências geek na veia — um dos que mais crescem agora.",
     bio: "DNRAP combina técnica de rima apurada com referências profundas ao universo geek. Atualmente seu canal conta com 20 mil inscritos.",
@@ -693,21 +708,6 @@ const ARTISTS = [
     socials: { instagram: "https://www.instagram.com/as.aceofc", youtube: "#", twitter: "#" },
     songs: [
       { id: "asace-real", title: "PERFEIÇÃO", duration: "0:28", cover: "🃏", url: "/audio/asace-trecho.mp3" },
-    ],
-  },
-  {
-    id: "bachiramusic", slug: "bachira-music", name: "Bachira Music", genre: "Pop",
-    short: "Energia solta e refrão animado — pop geek feito pra tocar em convenção.",
-    bio: "Bachira Music traz um pop geek animado, com energia solta que contagia o público das convenções. Atualmente seu canal conta com 20 mil inscritos.",
-    color: "#22d3ee", accent: "#67e8f9",
-    photo: BACHIRAMUSIC_PHOTO,
-    clipTitle: "Império",
-    clipUrl: "/audio/bachiramusic-trecho.mp3",
-    subscribers: "20,6 mil inscritos",
-    subscriberCount: 20600,
-    socials: { instagram: "https://www.instagram.com/bachiraofc", youtube: "#", twitter: "#" },
-    songs: [
-      { id: "bachiramusic-real", title: "Império", duration: "0:33", cover: "⚽", url: "/audio/bachiramusic-trecho.mp3" },
     ],
   },
   {
