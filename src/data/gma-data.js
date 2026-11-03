@@ -1192,13 +1192,13 @@ const ARTISTS = [
   },
   {
     id: "1ms", slug: "1ms", name: "1 ms", genre: "Rap Geek",
-    short: "Rap geek de alto nivel com identidade propria e milhoes de fas pela internet.",
-    bio: "1 ms e um dos grandes nomes da cena geek. Atualmente seu canal conta com 2,09 milhoes de inscritos.",
+    short: "Rap geek de alto nivel com identidade propria e uma comunidade de fas crescendo na internet.",
+    bio: "1 ms e um dos novos nomes da cena geek. Atualmente seu canal conta com 2.090 inscritos.",
     color: "#e11d2e", accent: "#ff4d5a",
     photo: ONEMS_PHOTO,
     clipUrl: "/audio/1ms-trecho.mp3",
-    subscribers: "2.090.000 inscritos",
-    subscriberCount: 2090000,
+    subscribers: "2.090 inscritos",
+    subscriberCount: 2090,
     baseVotes: 0,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
