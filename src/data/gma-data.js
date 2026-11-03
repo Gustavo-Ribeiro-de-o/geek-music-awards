@@ -546,6 +546,37 @@ const ARTISTS = [
     ],
   },
   {
+    id: "1ms", slug: "1ms", name: "1 ms", genre: "Rap Geek",
+    short: "Rap geek de alto nivel com identidade propria e uma comunidade de fas crescendo na internet.",
+    bio: "1 ms e um dos novos nomes da cena geek. Atualmente seu canal conta com 2.090 inscritos.",
+    color: "#e11d2e", accent: "#ff4d5a",
+    photo: ONEMS_PHOTO,
+    clipTitle: "Me Entreguei pro Caos",
+    clipUrl: "/audio/1ms-trecho.mp3",
+    subscribers: "2.090 inscritos",
+    subscriberCount: 2090,
+    baseVotes: 0,
+    socials: { instagram: "#", youtube: "#", twitter: "#" },
+    songs: [
+      { id: "1ms-real", title: "Me Entreguei pro Caos", duration: "0:36", cover: ONEMS_PHOTO, url: "/audio/1ms-trecho.mp3" },
+    ],
+  },
+  {
+    id: "bachiramusic", slug: "bachira-music", name: "Bachira Music", genre: "Pop",
+    short: "Energia solta e refrão animado — pop geek feito pra tocar em convenção.",
+    bio: "Bachira Music traz um pop geek animado, com energia solta que contagia o público das convenções. Atualmente seu canal conta com 20 mil inscritos.",
+    color: "#22d3ee", accent: "#67e8f9",
+    photo: BACHIRAMUSIC_PHOTO,
+    clipTitle: "Império",
+    clipUrl: "/audio/bachiramusic-trecho.mp3",
+    subscribers: "20,6 mil inscritos",
+    subscriberCount: 20600,
+    socials: { instagram: "https://www.instagram.com/bachiraofc", youtube: "#", twitter: "#" },
+    songs: [
+      { id: "bachiramusic-real", title: "Império", duration: "0:33", cover: "⚽", url: "/audio/bachiramusic-trecho.mp3" },
+    ],
+  },
+  {
     id: "ravanello", slug: "ravanello", name: "Ravanello", genre: "Rap Geek",
     short: "Flow cru e direto — um dos nomes que estão começando a chamar atenção na cena.",
     bio: "Ravanello vem construindo sua base de fãs com um rap geek autêntico e sem filtro. Atualmente seu canal conta com 5,65 mil inscritos.",
@@ -573,21 +604,6 @@ const ARTISTS = [
     socials: { instagram: "https://www.instagram.com/santomusics", youtube: "#", twitter: "#" },
     songs: [
       { id: "santo-real", title: "Trovão Cruel", duration: "0:13", cover: "🕯️", url: "/audio/santo-trecho.mp3" },
-    ],
-  },
-  {
-    id: "bachiramusic", slug: "bachira-music", name: "Bachira Music", genre: "Pop",
-    short: "Energia solta e refrão animado — pop geek feito pra tocar em convenção.",
-    bio: "Bachira Music traz um pop geek animado, com energia solta que contagia o público das convenções. Atualmente seu canal conta com 20 mil inscritos.",
-    color: "#22d3ee", accent: "#67e8f9",
-    photo: BACHIRAMUSIC_PHOTO,
-    clipTitle: "Império",
-    clipUrl: "/audio/bachiramusic-trecho.mp3",
-    subscribers: "20,6 mil inscritos",
-    subscriberCount: 20600,
-    socials: { instagram: "https://www.instagram.com/bachiraofc", youtube: "#", twitter: "#" },
-    songs: [
-      { id: "bachiramusic-real", title: "Império", duration: "0:33", cover: "⚽", url: "/audio/bachiramusic-trecho.mp3" },
     ],
   },
   {
@@ -1188,22 +1204,6 @@ const ARTISTS = [
     socials: { instagram: "https://www.instagram.com/_theuzoficial", youtube: "#", twitter: "#" },
     songs: [
       { id: "theuz-real", title: "Sem Correntes", duration: "0:37", cover: "⚔️", url: "/audio/theuz-trecho.mp3" },
-    ],
-  },
-  {
-    id: "1ms", slug: "1ms", name: "1 ms", genre: "Rap Geek",
-    short: "Rap geek de alto nivel com identidade propria e uma comunidade de fas crescendo na internet.",
-    bio: "1 ms e um dos novos nomes da cena geek. Atualmente seu canal conta com 2.090 inscritos.",
-    color: "#e11d2e", accent: "#ff4d5a",
-    photo: ONEMS_PHOTO,
-    clipTitle: "Me Entreguei pro Caos",
-    clipUrl: "/audio/1ms-trecho.mp3",
-    subscribers: "2.090 inscritos",
-    subscriberCount: 2090,
-    baseVotes: 0,
-    socials: { instagram: "#", youtube: "#", twitter: "#" },
-    songs: [
-      { id: "1ms-real", title: "Me Entreguei pro Caos", duration: "0:36", cover: ONEMS_PHOTO, url: "/audio/1ms-trecho.mp3" },
     ],
   },
 ];
