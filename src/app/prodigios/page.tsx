@@ -11,7 +11,7 @@ export default function ProdigiosPage() {
 
   return (
     <TierArtistsList
-      title="Prodígios"
+      title="PRODÍGIOS"
       subtitle="Canais entre 30 mil e 100 mil inscritos, já com uma base sólida de fãs."
       icon="🌟"
       artists={artists}

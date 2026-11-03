@@ -48,7 +48,7 @@ export function WelcomeModal() {
           <Vote size={28} />
         </div>
         <h3>Como funciona a votação</h3>
-        <p className="muted">Você tem <strong style={{ color: "var(--white)" }}>5 votos por categoria</strong> (Artista, Prodígio e Revelações).</p>
+        <p className="muted">Você tem <strong style={{ color: "var(--white)" }}>5 votos por categoria</strong> (LENDAS, PRODÍGIOS e PEQUENOS GIGANTES).</p>
         <div className="modal__actions">
           <button className="btn btn--primary" style={{ width: "100%" }} onClick={closeAll}>
             Entendi

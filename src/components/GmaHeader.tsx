@@ -7,9 +7,9 @@ import { Menu, X, Sparkles, Lock } from "lucide-react";
 
 const LINKS: [string, string, string?][] = [
   ["/", "Início"],
-  ["/artistas", "Artistas", "mais de 100k"],
-  ["/revelacoes", "Revelações", "até 30k"],
-  ["/prodigios", "Prodígios", "entre 30 e 50k"],
+  ["/artistas", "LENDAS", "mais de 100k"],
+  ["/revelacoes", "PEQUENOS GIGANTES", "até 30k"],
+  ["/prodigios", "PRODÍGIOS", "entre 30 e 50k"],
   ["/categorias", "Categorias"],
   ["/evento", "Evento"],
   ["/projetos-2027", "Projetos 2027"],

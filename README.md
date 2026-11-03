@@ -1,7 +1,7 @@
 # Geek Music Awards — Site completo + login por e-mail
 
 Este projeto junta o **visual completo** do Geek Music Awards (todas as
-páginas: Início, Artistas, Revelações, Prodígios, Categorias, Evento, perfil
+páginas: Início, Lendas, Pequenos Gigantes, Prodígios, Categorias, Evento, perfil
 de cada artista) com o sistema de **login por e-mail** que impede a mesma
 pessoa de votar várias vezes.
 
@@ -75,14 +75,14 @@ src/
     ArtistCard.tsx                    Card de artista (usado em várias páginas)
     ArtistProfile.tsx                 Perfil completo de um artista
     VoteProvider.tsx                  Contexto global do modal de voto
-    TierArtistsList.tsx               Lista usada por Revelações/Prodígios
+    TierArtistsList.tsx               Lista usada por Pequenos Gigantes/Prodígios
     ui.tsx                            Reveal (animação), CountdownBlock, GenreBadge
   app/
     page.tsx                          Início
-    artistas/page.tsx                 Lista de artistas (100K+)
+    artistas/page.tsx                 Lendas (100K+)
     artistas/[slug]/page.tsx          Perfil do artista
-    revelacoes/page.tsx               Artistas com ≤30K inscritos
-    prodigios/page.tsx                Artistas entre 30K e 100K
+    revelacoes/page.tsx               Pequenos Gigantes (≤30K inscritos)
+    prodigios/page.tsx                Prodígios (entre 30K e 100K)
     categorias/page.tsx               Categorias da premiação (vitrine)
     evento/page.tsx                   Página do evento
     equipe/page.tsx                   Painel da equipe (senha + votos reais)

@@ -7,9 +7,18 @@ type ArtistResult = {
   id: string;
   slug: string;
   name: string;
+  tier: string | null;
+  tierLabel: string | null;
   total: number;
   byCategory: { slug: string; name: string; count: number }[];
 };
+
+const TIER_FILTERS: { value: string; label: string }[] = [
+  { value: "todos", label: "TODOS" },
+  { value: "lendas", label: "LENDAS" },
+  { value: "prodigios", label: "PRODÍGIOS" },
+  { value: "pequenos-gigantes", label: "PEQUENOS GIGANTES" },
+];
 
 export default function EquipePage() {
   const [pwd, setPwd] = useState("");
@@ -18,6 +27,7 @@ export default function EquipePage() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<{ artists: ArtistResult[]; totalVotes: number; totalUsers: number } | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
+  const [tierFilter, setTierFilter] = useState("todos");
 
   async function login() {
     setLoading(true);
@@ -85,6 +95,8 @@ export default function EquipePage() {
 
   const totalVotes = data?.totalVotes ?? 0;
   const leader = data?.artists?.[0];
+  const visibleArtists = (data?.artists ?? []).filter((a) => tierFilter === "todos" || a.tier === tierFilter);
+  const visibleVotes = visibleArtists.reduce((sum, a) => sum + a.total, 0);
 
   return (
     <section className="section section--top admin">
@@ -116,12 +128,28 @@ export default function EquipePage() {
         )}
       </div>
 
+      <div className="chips" style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.75rem" }}>
+        {TIER_FILTERS.map((f) => (
+          <button
+            key={f.value}
+            className={`chip ${tierFilter === f.value ? "chip--active" : ""}`}
+            onClick={() => setTierFilter(f.value)}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+      <p className="muted small" style={{ marginBottom: "0.75rem" }}>
+        {visibleArtists.length} artistas · <strong style={{ color: "var(--white)" }}>{visibleVotes}</strong> votos
+      </p>
+
       <div className="admin-table">
-        {data?.artists.map((a) => (
+        {visibleArtists.map((a) => (
           <div key={a.id} className="admin-row admin-row--stacked">
             <div className="admin-row__main">
               <div className="admin-row__id">
                 <span>{a.name}</span>
+                {a.tierLabel && <span className="tier-tag">{a.tierLabel}</span>}
               </div>
               <span className="admin-row__votes">{a.total}</span>
             </div>

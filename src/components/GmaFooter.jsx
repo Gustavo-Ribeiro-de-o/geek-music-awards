@@ -11,7 +11,7 @@ export function GmaFooter() {
         </div>
         <div className="footer__links">
           <Link href="/">Início</Link>
-          <Link href="/artistas">Artistas</Link>
+          <Link href="/artistas">LENDAS</Link>
           <Link href="/categorias">Categorias</Link>
           <Link href="/evento">Evento</Link>
           <Link href="/equipe">Área da equipe</Link>

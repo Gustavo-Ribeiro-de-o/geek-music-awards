@@ -8,7 +8,7 @@ export default function RevelacoesPage() {
 
   return (
     <TierArtistsList
-      title="Revelações"
+      title="PEQUENOS GIGANTES"
       subtitle="Canais com até 30 mil inscritos que estão explodindo na cena geek agora."
       icon="✨"
       artists={artists}

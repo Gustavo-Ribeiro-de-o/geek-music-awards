@@ -3,23 +3,10 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { checkRateLimit } from "@/lib/rateLimit";
-import { ARTISTS, MAIN_MIN_SUBSCRIBERS, REVELACAO_MAX_SUBSCRIBERS } from "@/data/gma-data";
+import { ARTISTS } from "@/data/gma-data";
+import { getTier, TIER_LABEL } from "@/lib/tiers";
 
 const MAX_VOTES_PER_TIER = Number(process.env.MAX_VOTES_PER_USER ?? "5");
-
-type Tier = "artistas" | "prodigios" | "revelacoes";
-
-function getTier(subscriberCount: number | undefined): Tier {
-  if (subscriberCount === undefined || subscriberCount >= MAIN_MIN_SUBSCRIBERS) return "artistas";
-  if (subscriberCount > REVELACAO_MAX_SUBSCRIBERS) return "prodigios";
-  return "revelacoes";
-}
-
-const TIER_LABEL: Record<Tier, string> = {
-  artistas: "Artistas",
-  prodigios: "Prodígios",
-  revelacoes: "Revelações",
-};
 
 export async function POST(req: NextRequest) {
   // 1. Precisa estar logado — sem sessão, sem voto. Esse é o ponto central:
@@ -55,7 +42,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Artista ou categoria não encontrados." }, { status: 404 });
   }
 
-  // 3. Descobre a faixa (Artistas / Prodígios / Revelações) do artista alvo
+  // 3. Descobre a faixa (Lendas / Prodígios / Pequenos Gigantes) do artista alvo
   // a partir dos dados estáticos (subscriberCount não fica no banco), e reúne
   // os slugs de todos os artistas dessa mesma faixa.
   const staticArtist = ARTISTS.find((a: any) => a.slug === artistSlug);
@@ -70,7 +57,7 @@ export async function POST(req: NextRequest) {
 
   // 4. Confere quantos votos esse usuário já usou nessa FAIXA de artista,
   // somando todas as categorias de premiação — o limite (ex: 5 votos) vale
-  // por faixa (Artistas / Prodígios / Revelações), não por categoria isolada.
+  // por faixa (Lendas / Prodígios / Pequenos Gigantes), não por categoria isolada.
   const votesInTier = await prisma.vote.count({
     where: { userId, artistId: { in: tierArtistIds } },
   });

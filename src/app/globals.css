@@ -60,7 +60,7 @@
 
       .nav--desktop { display: flex; gap: 0.25rem; }
       .nav__link { background: none; border: none; color: var(--muted); padding: 0.5rem 0.9rem; border-radius: 999px; font-size: 0.88rem; font-weight: 500; transition: color 0.2s, background 0.2s; }
-      .nav__link { display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.2; }
+      .nav__link { display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.2; white-space: nowrap; }
       .nav__range { font-size: 0.68rem; font-weight: 400; color: var(--muted); opacity: 0.85; margin-top: 0.1rem; white-space: nowrap; }
       .nav__link--active .nav__range { color: var(--yellow); opacity: 1; }
       .nav__link:hover { color: var(--white); background: rgba(255,255,255,0.05); }
@@ -303,6 +303,7 @@
       .admin-row__main { display: flex; align-items: center; gap: 1rem; }
       .admin-row__categories { display: flex; flex-wrap: wrap; gap: 0.9rem; padding-left: 2.9rem; }
       .admin-row__id { display: flex; align-items: center; gap: 0.7rem; flex: 1; }
+      .tier-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em; color: var(--yellow); border: 1px solid rgba(255,214,10,0.45); border-radius: 999px; padding: 0.1rem 0.55rem; white-space: nowrap; }
       .admin-row__votes { font-weight: 700; width: 70px; }
       .admin-row__actions { display: flex; gap: 0.4rem; }
       .icon-btn { background: none; border: none; color: var(--muted); padding: 0.2rem; }

@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { ARTISTS } from "@/data/gma-data";
+import { getTier, TIER_LABEL } from "@/lib/tiers";
 
 export async function GET(req: NextRequest) {
   const pwd = req.headers.get("x-team-password");
@@ -25,17 +27,25 @@ export async function GET(req: NextRequest) {
     breakdown[row.artistId][row.categoryId] = row._count._all;
   }
 
-  const results = artists.map((artist) => ({
-    id: artist.id,
-    slug: artist.slug,
-    name: artist.name,
-    total: artistTotals[artist.id] ?? 0,
-    byCategory: categories.map((cat) => ({
-      slug: cat.slug,
-      name: cat.name,
-      count: breakdown[artist.id]?.[cat.id] ?? 0,
-    })),
-  }));
+  const results = artists.map((artist) => {
+    // A faixa vem dos dados estáticos (subscriberCount não fica no banco).
+    // Registro que só existe no banco, sem dados estáticos, fica sem faixa.
+    const staticArtist = ARTISTS.find((a: any) => a.slug === artist.slug);
+    const tier = staticArtist ? getTier(staticArtist.subscriberCount) : null;
+    return {
+      id: artist.id,
+      slug: artist.slug,
+      name: artist.name,
+      tier,
+      tierLabel: tier ? TIER_LABEL[tier] : null,
+      total: artistTotals[artist.id] ?? 0,
+      byCategory: categories.map((cat) => ({
+        slug: cat.slug,
+        name: cat.name,
+        count: breakdown[artist.id]?.[cat.id] ?? 0,
+      })),
+    };
+  });
 
   results.sort((a, b) => b.total - a.total);
 

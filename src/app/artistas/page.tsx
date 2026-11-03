@@ -19,7 +19,7 @@ export default function ArtistsPage() {
   return (
     <section className="section section--top">
       <Reveal>
-        <h1 className="page-title">Artistas indicados</h1>
+        <h1 className="page-title">LENDAS</h1>
         <p className="muted">Conheça todos os artistas concorrendo ao Geek Music Awards e vote no seu favorito.</p>
       </Reveal>
 
