@@ -42,8 +42,8 @@ export default function LoginPage() {
           type="submit"
           disabled={sending}
           style={{
-            background: "linear-gradient(90deg, var(--purple), var(--blue))",
-            color: "white",
+            background: "var(--yellow)",
+            color: "#0a0a0a",
             border: "none",
             borderRadius: 999,
             padding: "0.85rem",

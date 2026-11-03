@@ -116,14 +116,14 @@ function VoteModal({
     return (
       <div className="modal-overlay" onClick={onClose}>
         <div className="modal" onClick={(e) => e.stopPropagation()}>
-          <div className="modal__icon" style={{ background: `${artist.color}22`, color: artist.color }}>
+          <div className="modal__icon">
             <Trophy size={28} />
           </div>
           <h3>Faça login pra votar em {artist.name}</h3>
           <p className="muted">Cada voto precisa de um e-mail verificado, pra impedir votos duplicados.</p>
           <div className="modal__actions">
             <button className="btn btn--ghost" onClick={onClose}>Cancelar</button>
-            <Link href="/login" className="btn btn--primary" style={{ background: artist.color, boxShadow: `0 8px 24px -8px ${artist.color}99` }} onClick={onClose}>
+            <Link href="/login" className="btn btn--primary" onClick={onClose}>
               Fazer login
             </Link>
           </div>
@@ -136,7 +136,7 @@ function VoteModal({
     return (
       <div className="modal-overlay" onClick={onClose}>
         <div className="modal" onClick={(e) => e.stopPropagation()}>
-          <div className="modal__icon" style={{ background: `${artist.color}22`, color: artist.color }}>
+          <div className="modal__icon">
             <Trophy size={28} />
           </div>
           <h3>Em qual categoria você quer votar em {artist.name}?</h3>
@@ -146,7 +146,6 @@ function VoteModal({
               <button
                 key={cat.id}
                 className={`vote-category-option ${category?.id === cat.id ? "vote-category-option--active" : ""}`}
-                style={category?.id === cat.id ? { borderColor: artist.color, background: `${artist.color}18` } : undefined}
                 onClick={() => onSelectCategory(cat)}
               >
                 <span className="vote-category-option__icon">{cat.icon}</span>
@@ -158,7 +157,7 @@ function VoteModal({
             <button className="btn btn--ghost" onClick={onClose}>Cancelar</button>
             <button
               className="btn btn--primary"
-              style={{ background: artist.color, boxShadow: `0 8px 24px -8px ${artist.color}99`, opacity: category ? 1 : 0.5 }}
+              style={{ opacity: category ? 1 : 0.5 }}
               disabled={!category}
               onClick={onProceedToConfirm}
             >
@@ -173,7 +172,7 @@ function VoteModal({
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
-        <div className="modal__icon" style={{ background: `${artist.color}22`, color: artist.color }}>
+        <div className="modal__icon">
           <Trophy size={28} />
         </div>
         <h3>Confirmar voto em {artist.name}?</h3>
@@ -182,7 +181,7 @@ function VoteModal({
         </p>
         <div className="modal__actions">
           <button className="btn btn--ghost" onClick={onBackToCategory}>Voltar</button>
-          <button className="btn btn--primary" style={{ background: artist.color, boxShadow: `0 8px 24px -8px ${artist.color}99`, opacity: busy ? 0.7 : 1 }} disabled={busy} onClick={onConfirm}>
+          <button className="btn btn--primary" style={{ opacity: busy ? 0.7 : 1 }} disabled={busy} onClick={onConfirm}>
             {busy ? "Enviando..." : "Confirmar voto"}
           </button>
         </div>

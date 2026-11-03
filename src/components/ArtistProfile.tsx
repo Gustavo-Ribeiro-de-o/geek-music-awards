@@ -34,13 +34,13 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
       <div
         className="artist-profile__banner"
         style={{
-          background: `radial-gradient(circle at 30% 20%, ${artist.color}55, transparent 60%), linear-gradient(160deg, #0d0616, #050208)`,
+          background: "radial-gradient(circle at 25% 20%, rgba(255,214,10,0.28), transparent 55%), radial-gradient(circle at 85% 90%, rgba(225,29,46,0.22), transparent 55%), linear-gradient(160deg, #141414, #0a0a0a)",
         }}
       >
         <div className="artist-profile__id">
           <div
             className="artist-profile__avatar"
-            style={{ background: artist.photo ? undefined : `linear-gradient(160deg, ${artist.color}, ${artist.accent})` }}
+            style={{ background: artist.photo ? undefined : "linear-gradient(160deg, #ffd60a, #e11d2e)" }}
           >
             {artist.photo ? (
               <img
@@ -54,7 +54,7 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
             )}
           </div>
           <div>
-            <h1>{artist.name} <Crown size={20} color={artist.color} /></h1>
+            <h1>{artist.name} <Crown size={20} color="#ffd60a" /></h1>
             {artist.subscribers && <span className="subscriber-count">{artist.subscribers}</span>}
           </div>
         </div>
@@ -77,7 +77,7 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
             <h2 className="section-subtitle">Músicas</h2>
             <div className="songs-list">
               {artist.songs.map((s: any) => (
-                <SongRow key={s.id} song={s} color={artist.color} playing={playingId === s.id} onToggle={() => toggleSong(s)} />
+                <SongRow key={s.id} song={s} playing={playingId === s.id} onToggle={() => toggleSong(s)} />
               ))}
             </div>
             {playingSong?.url && (
@@ -97,7 +97,7 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
             {votingOpen ? (
               <button
                 className="btn btn--primary"
-                style={{ background: artist.color, boxShadow: `0 8px 24px -8px ${artist.color}99`, marginTop: "1rem", width: "100%" }}
+                style={{ marginTop: "1rem", width: "100%" }}
                 onClick={() => openVote(artist)}
               >
                 VOTAR NESTE ARTISTA
@@ -112,20 +112,10 @@ export function ArtistProfile({ artist, votingOpen }: { artist: any; votingOpen:
   );
 }
 
-function isDarkColor(hex: string) {
-  const c = hex.replace("#", "");
-  const r = parseInt(c.substring(0, 2), 16);
-  const g = parseInt(c.substring(2, 4), 16);
-  const b = parseInt(c.substring(4, 6), 16);
-  return (0.299 * r + 0.587 * g + 0.114 * b) / 255 < 0.45;
-}
-
-function SongRow({ song, color, playing, onToggle }: { song: any; color: string; playing: boolean; onToggle: () => void }) {
-  const idleColor = isDarkColor(color) ? "#e5e5e5" : color;
-  const activeFg = isDarkColor(color) ? "#ffffff" : "#000000";
+function SongRow({ song, playing, onToggle }: { song: any; playing: boolean; onToggle: () => void }) {
   return (
     <div className="song-row">
-      <div className="song-row__cover" style={{ background: `${color}22` }}>
+      <div className="song-row__cover">
         {typeof song.cover === "string" && song.cover.startsWith("data:image") ? (
           <img src={song.cover} alt="" className="song-row__cover-img" />
         ) : (
@@ -137,12 +127,8 @@ function SongRow({ song, color, playing, onToggle }: { song: any; color: string;
         <span className="muted small">{song.ref}</span>
       </div>
       <span className="muted small">{song.duration}</span>
-      <button
-        className={`play-btn ${playing ? "play-btn--active" : ""}`}
-        style={{ borderColor: idleColor, color: playing ? activeFg : idleColor, background: playing ? color : "transparent" }}
-        onClick={onToggle}
-      >
-        <Play size={14} fill={playing ? activeFg : "none"} />
+      <button className={`play-btn ${playing ? "play-btn--active" : ""}`} onClick={onToggle}>
+        <Play size={14} fill={playing ? "#0a0a0a" : "none"} />
       </button>
     </div>
   );

@@ -33,10 +33,10 @@ export function ArtistCard({ artist, votingOpen }: { artist: Artist; votingOpen:
   const { openVote } = useVote();
 
   return (
-    <div className="card artist-card" style={{ ["--accent" as string]: artist.color }}>
+    <div className="card artist-card">
       <div
         className="artist-card__avatar"
-        style={{ background: artist.photo ? undefined : `linear-gradient(160deg, ${artist.color}55, transparent)` }}
+        style={{ background: artist.photo ? undefined : "linear-gradient(160deg, rgba(255,214,10,0.35), transparent)" }}
       >
         {artist.photo ? (
           <img
@@ -74,11 +74,7 @@ export function ArtistCard({ artist, votingOpen }: { artist: Artist; votingOpen:
             VER PERFIL
           </Link>
           {votingOpen && (
-            <button
-              className="btn btn--primary btn--sm"
-              style={{ background: artist.color, boxShadow: `0 8px 24px -8px ${artist.color}99` }}
-              onClick={() => openVote(artist)}
-            >
+            <button className="btn btn--primary btn--sm" onClick={() => openVote(artist)}>
               VOTAR
             </button>
           )}
