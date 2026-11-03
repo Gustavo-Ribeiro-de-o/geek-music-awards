@@ -5,11 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Sparkles, Lock } from "lucide-react";
 
-const LINKS: [string, string][] = [
+const LINKS: [string, string, string?][] = [
   ["/", "Início"],
-  ["/artistas", "Artistas"],
-  ["/revelacoes", "Revelações"],
-  ["/prodigios", "Prodígios"],
+  ["/artistas", "Artistas", "mais de 100k"],
+  ["/revelacoes", "Revelações", "até 30k"],
+  ["/prodigios", "Prodígios", "entre 30 e 50k"],
   ["/categorias", "Categorias"],
   ["/evento", "Evento"],
   ["/projetos-2027", "Projetos 2027"],
@@ -35,9 +35,10 @@ export function GmaHeader() {
         </Link>
 
         <nav className="nav nav--desktop">
-          {LINKS.map(([href, label]) => (
+          {LINKS.map(([href, label, range]) => (
             <Link key={href} href={href} className={`nav__link ${pathname === href ? "nav__link--active" : ""}`}>
               {label}
+              {range && <span className="nav__range">{range}</span>}
             </Link>
           ))}
         </nav>
@@ -52,7 +53,7 @@ export function GmaHeader() {
 
       {menuOpen && (
         <div className="nav nav--mobile">
-          {LINKS.map(([href, label]) => (
+          {LINKS.map(([href, label, range]) => (
             <Link
               key={href}
               href={href}
@@ -60,6 +61,7 @@ export function GmaHeader() {
               onClick={() => setMenuOpen(false)}
             >
               {label}
+              {range && <span className="nav__range">{range}</span>}
             </Link>
           ))}
           <Link href="/equipe" className="nav__link nav__link--admin" onClick={() => setMenuOpen(false)}>
