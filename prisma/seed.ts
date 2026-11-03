@@ -72,6 +72,7 @@ const ARTISTS = [
   { slug: "blaze-rapper", name: "BLAZE RAPPER" },
   { slug: "jiorzin", name: "jiorzin" },
   { slug: "theuz", name: "Theuz" },
+  { slug: "1ms", name: "1 ms" },
 ];
 
 const CATEGORIES = [
