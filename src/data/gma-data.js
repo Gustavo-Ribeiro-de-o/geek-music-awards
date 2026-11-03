@@ -1196,13 +1196,14 @@ const ARTISTS = [
     bio: "1 ms e um dos novos nomes da cena geek. Atualmente seu canal conta com 2.090 inscritos.",
     color: "#e11d2e", accent: "#ff4d5a",
     photo: ONEMS_PHOTO,
+    clipTitle: "Me Entreguei pro Caos",
     clipUrl: "/audio/1ms-trecho.mp3",
     subscribers: "2.090 inscritos",
     subscriberCount: 2090,
     baseVotes: 0,
     socials: { instagram: "#", youtube: "#", twitter: "#" },
     songs: [
-      { id: "1ms-real", title: "Trecho", duration: "0:36", cover: ONEMS_PHOTO, url: "/audio/1ms-trecho.mp3" },
+      { id: "1ms-real", title: "Me Entreguei pro Caos", duration: "0:36", cover: ONEMS_PHOTO, url: "/audio/1ms-trecho.mp3" },
     ],
   },
 ];
