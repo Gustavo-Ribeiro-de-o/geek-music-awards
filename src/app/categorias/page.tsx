@@ -13,7 +13,6 @@ export default function CategoriesPage() {
         {CATEGORIES.map((c: any, i: number) => (
           <Reveal key={c.id} delay={i * 60}>
             <div className="card category-card">
-              <div className="category-card__icon">{c.icon}</div>
               <h3>{c.name}</h3>
               <p className="muted small">{c.desc}</p>
               <div className="category-card__footer">
