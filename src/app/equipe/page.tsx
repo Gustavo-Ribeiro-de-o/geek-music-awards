@@ -27,6 +27,8 @@ export default function EquipePage() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<{ artists: ArtistResult[]; totalVotes: number; totalUsers: number } | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
+  const [resetPwd, setResetPwd] = useState("");
+  const [resetError, setResetError] = useState("");
   const [tierFilter, setTierFilter] = useState("todos");
 
   async function login() {
@@ -59,12 +61,29 @@ export default function EquipePage() {
     }
   }
 
+  function cancelReset() {
+    setConfirmReset(false);
+    setResetPwd("");
+    setResetError("");
+  }
+
   async function resetVotes() {
     setLoading(true);
+    setResetError("");
     try {
-      await fetch("/api/team/reset", { method: "POST", headers: { "x-team-password": pwd } });
+      const res = await fetch("/api/team/reset", {
+        method: "POST",
+        headers: { "x-team-password": pwd, "x-reset-password": resetPwd },
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        setResetError(body.error ?? "Não foi possível zerar os votos.");
+        return;
+      }
       await refresh();
-      setConfirmReset(false);
+      cancelReset();
+    } catch {
+      setResetError("Erro de conexão.");
     } finally {
       setLoading(false);
     }
@@ -114,12 +133,33 @@ export default function EquipePage() {
       <div className="admin__header" style={{ marginTop: 0, marginBottom: "0.75rem" }}>
         <h2 className="section-subtitle" style={{ margin: 0 }}>Votos por artista</h2>
         {confirmReset ? (
-          <div style={{ display: "flex", gap: "0.5rem" }}>
-            <span className="muted small" style={{ alignSelf: "center" }}>Zerar todos os votos?</span>
-            <button className="btn btn--ghost btn--sm" onClick={() => setConfirmReset(false)}>Cancelar</button>
-            <button className="btn btn--sm" style={{ background: "#ef4444", color: "white" }} onClick={resetVotes} disabled={loading}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", alignItems: "center" }}>
+            <span className="muted small">Digite a senha para zerar todos os votos:</span>
+            <input
+              type="password"
+              placeholder="Senha de exclusão"
+              value={resetPwd}
+              onChange={(e) => setResetPwd(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && resetPwd && resetVotes()}
+              style={{
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid var(--border)",
+                borderRadius: 10,
+                padding: "0.4rem 0.75rem",
+                color: "var(--white)",
+                outline: "none",
+              }}
+            />
+            <button className="btn btn--ghost btn--sm" onClick={cancelReset}>Cancelar</button>
+            <button
+              className="btn btn--sm"
+              style={{ background: "#ef4444", color: "white", opacity: resetPwd ? 1 : 0.5 }}
+              onClick={resetVotes}
+              disabled={loading || !resetPwd}
+            >
               Confirmar
             </button>
+            {resetError && <span className="error-text small">{resetError}</span>}
           </div>
         ) : (
           <button className="btn btn--outline btn--sm" onClick={() => setConfirmReset(true)}>
