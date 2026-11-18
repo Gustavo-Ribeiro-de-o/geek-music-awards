@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { ARTISTS } from "@/data/gma-data";
+import { ARTISTS, VOTE_CATEGORIES } from "@/data/gma-data";
 import { getTier, TIER_LABEL } from "@/lib/tiers";
 
 export async function GET(req: NextRequest) {
@@ -11,7 +11,11 @@ export async function GET(req: NextRequest) {
 
   const [artists, categories, perArtist, perArtistCategory, totalVotes, totalUsers] = await Promise.all([
     prisma.artist.findMany({ orderBy: { name: "asc" } }),
-    prisma.category.findMany({ orderBy: { name: "asc" } }),
+    // Só as categorias que existem na votação do site (o banco tem outras sem voto).
+    prisma.category.findMany({
+      where: { slug: { in: VOTE_CATEGORIES.map((c: any) => c.id) } },
+      orderBy: { name: "asc" },
+    }),
     prisma.vote.groupBy({ by: ["artistId"], _count: { _all: true } }),
     prisma.vote.groupBy({ by: ["artistId", "categoryId"], _count: { _all: true } }),
     prisma.vote.count(),
